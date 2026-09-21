@@ -36,11 +36,9 @@ inspired by Web3 interfaces.
 - UI layout
 - Git & GitHub workflow
 
-## Project Status
+## Live Demo
 
-**In Progress**
-
-This project is being developed as part of my frontend learning and portfolio.
+[View Live Demo](https://ahmad-choirudin.github.io/portfolio/frontend/web3-demo.html)
 
 ## Disclaimer
 
