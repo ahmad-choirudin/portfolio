@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Evaluation Dashboard | Ahmad Choirudin</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #0b0b0f;
+      color: #f5f5f5;
+      line-height: 1.6;
+      padding: 30px 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    header {
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      color: #aaa;
+    }
+
+    .card {
+      background: #15151b;
+      border: 1px solid #292933;
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 180px;
+      background: #0f0f14;
+      color: #fff;
+      border: 1px solid #33333d;
+      border-radius: 10px;
+      padding: 14px;
+      resize: vertical;
+      font-size: 15px;
+    }
+
+    .criteria {
+      display: grid;
+      gap: 14px;
+      margin-top: 15px;
+    }
+
+    .criterion {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 14px;
+      background: #101017;
+      border-radius: 10px;
+    }
+
+    select {
+      background: #1d1d25;
+      color: white;
+      border: 1px solid #3a3a46;
+      border-radius: 8px;
+      padding: 8px 12px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      background: white;
+      color: #111;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.85;
+    }
+
+    .result {
+      margin-top: 20px;
+      padding: 20px;
+      border-radius: 10px;
+      background: #101017;
+      display: none;
+    }
+
+    .score {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .footer {
+      margin-top: 30px;
+      color: #777;
+      font-size: 14px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <header>
+      <h1>AI Evaluation Dashboard</h1>
+      <p class="subtitle">
+        Interactive AI response evaluation tool — Portfolio Project by Ahmad Choirudin
+      </p>
+    </header>
+
+    <section class="card">
+      <label for="response">AI Response</label>
+
+      <textarea
+        id="response"
+        placeholder="Paste an AI-generated response here..."
+      ></textarea>
+    </section>
+
+    <section class="card">
+
+      <h2>Evaluation Criteria</h2>
+
+      <div class="criteria">
+
+        <div class="criterion">
+          <span>Relevance</span>
+          <select class="rating">
+            <option value="1">1 — Poor</option>
+            <option value="2">2 — Needs Improvement</option>
+            <option value="3" selected>3 — Acceptable</option>
+            <option value="4">4 — Good</option>
+            <option value="5">5 — Excellent</option>
+          </select>
+        </div>
+
+        <div class="criterion">
+          <span>Accuracy</span>
+          <select class="rating">
+            <option value="1">1 — Poor</option>
+            <option value="2">2 — Needs Improvement</option>
+            <option value="3" selected>3 — Acceptable</option>
+            <option value="4">4 — Good</option>
+            <option value="5">5 — Excellent</option>
+          </select>
+        </div>
+
+        <div class="criterion">
+          <span>Clarity</span>
+          <select class="rating">
+            <option value="1">1 — Poor</option>
+            <option value="2">2 — Needs Improvement</option>
+            <option value="3" selected>3 — Acceptable</option>
+            <option value="4">4 — Good</option>
+            <option value="5">5 — Excellent</option>
+          </select>
+        </div>
+
+        <div class="criterion">
+          <span>Language Quality</span>
+          <select class="rating">
+            <option value="1">1 — Poor</option>
+            <option value="2">2 — Needs Improvement</option>
+            <option value="3" selected>3 — Acceptable</option>
+            <option value="4">4 — Good</option>
+            <option value="5">5 — Excellent</option>
+          </select>
+        </div>
+
+        <div class="criterion">
+          <span>Completeness</span>
+          <select class="rating">
+            <option value="1">1 — Poor</option>
+            <option value="2">2 — Needs Improvement</option>
+            <option value="3" selected>3 — Acceptable</option>
+            <option value="4">4 — Good</option>
+            <option value="5">5 — Excellent</option>
+          </select>
+        </div>
+
+        <div class="criterion">
+          <span>Tone</span>
+          <select class="rating">
+            <option value="1">1 — Poor</option>
+            <option value="2" selected>2 — Needs Improvement</option>
+            <option value="3">3 — Acceptable</option>
+            <option value="4">4 — Good</option>
+            <option value="5">5 — Excellent</option>
+          </select>
+        </div>
+
+      </div>
+
+      <button onclick="calculateScore()">Calculate Evaluation</button>
+
+      <div class="result" id="result">
+        <div class="score" id="score"></div>
+        <p id="assessment"></p>
+      </div>
+
+    </section>
+
+    <p class="footer">
+      Self-created portfolio project. Not based on confidential client data.
+    </p>
+
+  </div>
+
+  <script>
+    function calculateScore() {
+      const ratings = document.querySelectorAll(".rating");
+
+      let total = 0;
+
+      ratings.forEach(rating => {
+        total += Number(rating.value);
+      });
+
+      const average = total / ratings.length;
+
+      document.getElementById("result").style.display = "block";
+
+      document.getElementById("score").textContent =
+        `Average Score: ${average.toFixed(2)} / 5`;
+
+      let assessment = "";
+
+      if (average >= 4) {
+        assessment = "Overall quality: Strong.";
+      } else if (average >= 3) {
+        assessment = "Overall quality: Acceptable, with room for improvement.";
+      } else {
+        assessment = "Overall quality: Needs significant improvement.";
+      }
+
+      document.getElementById("assessment").textContent = assessment;
+    }
+  </script>
+
+</body>
+  </html>
