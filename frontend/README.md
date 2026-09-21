@@ -1,46 +1,48 @@
-# Frontend Development
+# Web3 Frontend Landing Page
 
-## Overview
+A self-created frontend project demonstrating my practical skills in building
+a responsive web interface with a Web3-inspired visual style.
 
-A collection of small frontend projects focused on building clean, responsive, and user-friendly web interfaces.
+## Project Overview
 
-## Technologies
+This project focuses on creating a modern landing page using:
 
-- HTML5
-- CSS3
+- HTML
+- CSS
 - JavaScript
+- Tailwind CSS
 - Responsive Web Design
-- Git & GitHub
 
-## Current Project
+The design direction uses a dark, minimalist, and futuristic visual style
+inspired by Web3 interfaces.
 
-### Web3 Portfolio Landing Page
+## Planned Features
 
-A simple landing page concept designed for a Web3-focused personal portfolio.
-
-### Planned Features
-
-- Responsive layout
+- Responsive navigation
 - Hero section
-- About section
-- Skills section
-- Project showcase
-- Contact section
-- Dark minimalist interface
+- Project introduction
+- Feature cards
+- Simple interactive elements
+- Responsive layout for mobile and desktop
+- Clean and accessible UI structure
 
 ## Skills Demonstrated
 
 - HTML structure
 - CSS styling
-- Responsive design
-- Basic JavaScript
-- UI organization
+- Tailwind CSS
+- JavaScript fundamentals
+- Responsive web design
+- UI layout
 - Git & GitHub workflow
 
-## Development Goals
+## Project Status
 
-The goal of this project is to continuously improve frontend development skills and build practical projects that can be included in a professional portfolio.
+**In Progress**
 
-## Note
+This project is being developed as part of my frontend learning and portfolio.
 
-This project is part of a self-directed learning and portfolio development process.
+## Disclaimer
+
+This is a self-created learning and portfolio project. It is not a client
+project or production application.
