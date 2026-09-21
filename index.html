@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ahmad Choirudin | AI Evaluation · Web3 · Frontend</title>
+
+  <meta
+    name="description"
+    content="Ahmad Choirudin — AI Evaluation, Data Annotation, Web3 Research, Frontend and Digital Operations."
+  >
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["Inter", "system-ui", "sans-serif"],
+            mono: ["JetBrains Mono", "monospace"]
+          }
+        }
+      }
+    };
+  </script>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #05070a;
+      color: #e5e7eb;
+      font-family: Inter, system-ui, sans-serif;
+    }
+
+    ::selection {
+      background: rgba(0, 242, 254, 0.25);
+      color: white;
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.035);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+
+    .glow {
+      box-shadow:
+        0 0 30px rgba(0, 242, 254, 0.08),
+        inset 0 0 30px rgba(0, 242, 254, 0.02);
+    }
+
+    .gradient-text {
+      background: linear-gradient(
+        90deg,
+        #ffffff,
+        #00f2fe,
+        #7c3aed
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    #particles {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .content-layer {
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+</head>
+
+<body class="min-h-screen grid-bg">
+
+  <canvas id="particles"></canvas>
+
+  <div class="content-layer">
+
+        <!-- NAVIGATION -->
+    <nav class="sticky top-0 z-50 border-b border-white/10 bg-black/50 backdrop-blur-xl">
+      <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
+
+        <a href="#home" class="font-mono text-sm font-bold tracking-wider">
+          <span class="text-white">AHMAD</span>
+          <span class="text-cyan-400">.DEV</span>
+        </a>
+
+        <div class="hidden gap-6 text-sm text-gray-400 md:flex">
+          <a href="#about" class="transition hover:text-cyan-400">About</a>
+          <a href="#skills" class="transition hover:text-cyan-400">Skills</a>
+          <a href="#projects" class="transition hover:text-cyan-400">Projects</a>
+          <a href="#experience" class="transition hover:text-cyan-400">Experience</a>
+          <a href="#contact" class="transition hover:text-cyan-400">Contact</a>
+        </div>
+
+        <a
+          href="https://github.com/ahmad-choirudin"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="rounded-lg border border-cyan-400/30 px-3 py-2 text-xs text-cyan-300 transition hover:border-cyan-400 hover:bg-cyan-400/10"
+        >
+          GitHub
+        </a>
+
+      </div>
+    </nav>
+
+
+    <!-- HERO -->
+    <main id="home">
+
+      <section class="mx-auto max-w-6xl px-5 pb-20 pt-20 md:pb-28 md:pt-28">
+
+        <div class="grid items-center gap-12 md:grid-cols-2">
+
+          <div>
+
+            <div class="mb-5 inline-flex items-center gap-2 rounded-full border border-cyan-400/20 bg-cyan-400/5 px-4 py-2 text-xs text-cyan-300">
+              <span class="h-2 w-2 animate-pulse rounded-full bg-cyan-400"></span>
+              Open to Remote Opportunities
+            </div>
+
+            <p class="mb-3 font-mono text-sm text-gray-500">
+              Hello, I'm
+            </p>
+
+            <h1 class="text-5xl font-black tracking-tight md:text-7xl">
+              Ahmad
+              <span class="gradient-text">Choirudin</span>
+            </h1>
+
+            <h2 class="mt-5 text-xl font-semibold text-gray-300 md:text-2xl">
+              AI Evaluation · Data Annotation · Web3 Research · Frontend
+            </h2>
+
+            <p class="mt-6 max-w-xl leading-7 text-gray-400">
+              Remote freelance digital worker focused on AI evaluation,
+              data annotation, Web3 research, frontend development,
+              and digital operations.
+            </p>
+
+            <div class="mt-8 flex flex-wrap gap-3">
+
+              <a
+                href="#projects"
+                class="rounded-xl bg-cyan-400 px-5 py-3 text-sm font-bold text-black transition hover:bg-cyan-300"
+              >
+                View Projects
+              </a>
+
+              <a
+                href="#contact"
+                class="rounded-xl border border-white/10 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition hover:border-cyan-400/40 hover:bg-white/10"
+              >
+                Contact Me
+              </a>
+
+            </div>
+
+            <div class="mt-8 flex gap-5 text-gray-500">
+
+              <a
+                href="https://github.com/ahmad-choirudin"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                class="transition hover:text-cyan-400"
+              >
+                <i data-lucide="github" class="h-5 w-5"></i>
+              </a>
+
+              <a
+                href="https://x.com/CubbieOG"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="X"
+                class="transition hover:text-cyan-400"
+              >
+                <i data-lucide="twitter" class="h-5 w-5"></i>
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/ahmad-choirudin-344a78393"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                class="transition hover:text-cyan-400"
+              >
+                <i data-lucide="linkedin" class="h-5 w-5"></i>
+              </a>
+
+            </div>
+
+          </div>
+
+                    <!-- TERMINAL PROFILE -->
+          <div class="glass glow rounded-2xl p-5">
+
+            <div class="mb-4 flex items-center gap-2 border-b border-white/10 pb-4">
+              <span class="h-3 w-3 rounded-full bg-red-500/70"></span>
+              <span class="h-3 w-3 rounded-full bg-yellow-500/70"></span>
+              <span class="h-3 w-3 rounded-full bg-green-500/70"></span>
+
+              <span class="ml-2 font-mono text-xs text-gray-500">
+                ahmad@remote:~
+              </span>
+            </div>
+
+            <div class="space-y-3 font-mono text-sm">
+
+              <div>
+                <span class="text-cyan-400">$</span>
+                <span class="text-gray-300"> whoami</span>
+              </div>
+
+              <div class="pl-4 text-gray-400">
+                Ahmad Choirudin
+              </div>
+
+              <div>
+                <span class="text-cyan-400">$</span>
+                <span class="text-gray-300"> profile --status</span>
+              </div>
+
+              <div class="rounded-lg bg-black/30 p-4 text-xs leading-6 text-gray-400">
+                <div>
+                  <span class="text-purple-400">role:</span>
+                  AI Trainer & Evaluator
+                </div>
+
+                <div>
+                  <span class="text-purple-400">focus:</span>
+                  AI Evaluation / Web3 / Frontend
+                </div>
+
+                <div>
+                  <span class="text-purple-400">work:</span>
+                  Remote / Freelance
+                </div>
+
+                <div>
+                  <span class="text-purple-400">location:</span>
+                  Indonesia
+                </div>
+
+                <div>
+                  <span class="text-purple-400">status:</span>
+                  <span class="text-green-400">available</span>
+                </div>
+              </div>
+
+              <div>
+                <span class="text-cyan-400">$</span>
+                <span class="text-gray-300"> skills --list</span>
+              </div>
+
+              <div class="pl-4 text-gray-500">
+                AI Evaluation · Data Annotation · Web3 Research
+                · Frontend · Digital Operations
+              </div>
+
+              <div class="flex items-center gap-2 pt-2">
+                <span class="text-cyan-400">$</span>
+                <span class="h-4 w-2 animate-pulse bg-cyan-400"></span>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+            <!-- ABOUT -->
+      <section id="about" class="mx-auto max-w-6xl px-5 py-20">
+
+        <div class="mb-10">
+          <p class="font-mono text-sm text-cyan-400">01 / ABOUT</p>
+
+          <h2 class="mt-2 text-3xl font-bold md:text-4xl">
+            About Me
+          </h2>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-2">
+
+          <div class="glass rounded-2xl p-6">
+
+            <p class="leading-8 text-gray-400">
+              I am a remote freelance digital worker with experience across
+              AI data annotation, AI evaluation, linguistic quality review,
+              Web3 research, frontend development, and digital operations.
+            </p>
+
+            <p class="mt-5 leading-8 text-gray-400">
+              My work combines structured analysis, online research,
+              attention to detail, and practical digital skills. I enjoy
+              working on projects where technology, data, language, and
+              online communities intersect.
+            </p>
+
+          </div>
+
+          <div class="glass rounded-2xl p-6">
+
+            <div class="mb-5 flex items-center gap-3">
+              <div class="rounded-xl bg-cyan-400/10 p-3 text-cyan-400">
+                <i data-lucide="target" class="h-6 w-6"></i>
+              </div>
+
+              <div>
+                <h3 class="font-semibold text-white">
+                  Career Focus
+                </h3>
+
+                <p class="text-sm text-gray-500">
+                  Remote-first opportunities
+                </p>
+              </div>
+            </div>
+
+            <ul class="space-y-3 text-sm text-gray-400">
+
+              <li class="flex gap-3">
+                <span class="text-cyan-400">→</span>
+                AI evaluation and data annotation
+              </li>
+
+              <li class="flex gap-3">
+                <span class="text-cyan-400">→</span>
+                Indonesian linguistic and localization quality
+              </li>
+
+              <li class="flex gap-3">
+                <span class="text-cyan-400">→</span>
+                Web3, blockchain and DeFi research
+              </li>
+
+              <li class="flex gap-3">
+                <span class="text-cyan-400">→</span>
+                Frontend and web development
+              </li>
+
+              <li class="flex gap-3">
+                <span class="text-cyan-400">→</span>
+                Community and digital operations
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- SKILLS -->
+      <section id="skills" class="mx-auto max-w-6xl px-5 py-20">
+
+        <div class="mb-10">
+          <p class="font-mono text-sm text-cyan-400">02 / SKILLS</p>
+
+          <h2 class="mt-2 text-3xl font-bold md:text-4xl">
+            Skills & Tools
+          </h2>
+
+          <p class="mt-4 max-w-2xl text-gray-500">
+            A practical mix of AI evaluation, research, frontend,
+            Web3, and digital workflow skills.
+          </p>
+        </div>
+
+        <div class="mb-8 flex flex-wrap gap-2">
+
+          <button
+            data-filter="all"
+            class="skill-filter rounded-lg border border-cyan-400/30 bg-cyan-400/10 px-4 py-2 text-sm text-cyan-300"
+          >
+            All
+          </button>
+
+          <button
+            data-filter="ai"
+            class="skill-filter rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-sm text-gray-400 transition hover:border-cyan-400/30 hover:text-cyan-300"
+          >
+            AI
+          </button>
+
+          <button
+            data-filter="frontend"
+            class="skill-filter rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-sm text-gray-400 transition hover:border-cyan-400/30 hover:text-cyan-300"
+          >
+            Frontend
+          </button>
+
+          <button
+            data-filter="web3"
+            class="skill-filter rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-sm text-gray-400 transition hover:border-cyan-400/30 hover:text-cyan-300"
+          >
+            Web3
+          </button>
+
+          <button
+            data-filter="tools"
+            class="skill-filter rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-sm text-gray-400 transition hover:border-cyan-400/30 hover:text-cyan-300"
+          >
+            Tools
+          </button>
+
+        </div>
+
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+
+          <div class="skill-card glass rounded-2xl p-5" data-category="ai">
+            <div class="mb-4 text-cyan-400">
+              <i data-lucide="brain" class="h-7 w-7"></i>
+            </div>
+
+            <h3 class="font-semibold text-white">
+              AI Evaluation
+            </h3>
+
+            <p class="mt-2 text-sm leading-6 text-gray-500">
+              AI response evaluation, data annotation,
+              quality review, and structured feedback.
+            </p>
+          </div>
+
+          <div class="skill-card glass rounded-2xl p-5" data-category="ai">
+            <div class="mb-4 text-cyan-400">
+              <i data-lucide="languages" class="h-7 w-7"></i>
+            </div>
+
+            <h3 class="font-semibold text-white">
+              Linguistic QA
+            </h3>
+
+            <p class="mt-2 text-sm leading-6 text-gray-500">
+              Indonesian language quality, localization,
+              grammar, tone, and contextual review.
+            </p>
+          </div>
+
+          <div class="skill-card glass rounded-2xl p-5" data-category="frontend">
+            <div class="mb-4 text-cyan-400">
+              <i data-lucide="code-2" class="h-7 w-7"></i>
+            </div>
+
+            <h3 class="font-semibold text-white">
+              Frontend
+            </h3>
+
+            <p class="mt-2 text-sm leading-6 text-gray-500">
+              HTML, CSS, JavaScript, responsive layouts,
+              Tailwind CSS, and basic web interfaces.
+            </p>
+          </div>
+
+          <div class="skill-card glass rounded-2xl p-5" data-category="web3">
+            <div class="mb-4 text-cyan-400">
+              <i data-lucide="blocks" class="h-7 w-7"></i>
+            </div>
+
+            <h3 class="font-semibold text-white">
+              Web3 Research
+            </h3>
+
+            <p class="mt-2 text-sm leading-6 text-gray-500">
+              Blockchain, crypto, DeFi, protocols,
+              ecosystems, and project research.
+            </p>
+          </div>
+
+          <div class="skill-card glass rounded-2xl p-5" data-category="tools">
+            <div class="mb-4 text-cyan-400">
+              <i data-lucide="github" class="h-7 w-7"></i>
+            </div>
+
+            <h3 class="font-semibold text-white">
+              Git & GitHub
+            </h3>
+
+            <p class="mt-2 text-sm leading-6 text-gray-500">
+              Repository management, README documentation,
+              version control, and portfolio publishing.
+            </p>
+          </div>
+
+          <div class="skill-card glass rounded-2xl p-5" data-category="tools">
+            <div class="mb-4 text-cyan-400">
+              <i data-lucide="search" class="h-7 w-7"></i>
+            </div>
+
+            <h3 class="font-semibold text-white">
+              Online Research
+            </h3>
+
+            <p class="mt-2 text-sm leading-6 text-gray-500">
+              Web research, information gathering,
+              data comparison, and structured analysis.
+            </p>
+          </div>
+
+        </div>
+
+      </section>
+
+            <!-- PROJECTS -->
+      <section id="projects" class="mx-auto max-w-6xl px-5 py-20">
+
+        <div class="mb-10">
+          <p class="font-mono text-sm text-cyan-400">03 / PROJECTS</p>
+
+          <h2 class="mt-2 text-3xl font-bold md:text-4xl">
+            Selected Projects
+          </h2>
+
+          <p class="mt-4 max-w-2xl text-gray-500">
+            Self-directed projects and practical work samples
+            demonstrating my current skills and interests.
+          </p>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+
+                    <article class="glass rounded-2xl p-6 transition hover:-translate-y-1 hover:border-cyan-400/30">
+
+            <div class="mb-5 flex items-center justify-between">
+
+              <div class="rounded-xl bg-cyan-400/10 p-3 text-cyan-400">
+                <i data-lucide="brain" class="h-6 w-6"></i>
+              </div>
+
+              <span class="rounded-full border border-white/10 px-3 py-1 text-xs text-gray-500">
+                AI
+              </span>
+
+            </div>
+
+            <h3 class="text-xl font-bold text-white">
+              Indonesian AI Response Evaluation
+            </h3>
+
+            <p class="mt-3 text-sm leading-7 text-gray-500">
+              A self-created evaluation sample focused on
+              assessing Indonesian AI responses for relevance,
+              clarity, accuracy, tone, and language quality.
+            </p>
+
+            <div class="mt-5 flex flex-wrap gap-2">
+
+              <span class="rounded-md bg-white/5 px-2 py-1 text-xs text-gray-500">
+                AI Evaluation
+              </span>
+
+              <span class="rounded-md bg-white/5 px-2 py-1 text-xs text-gray-500">
+                Indonesian
+              </span>
+
+              <span class="rounded-md bg-white/5 px-2 py-1 text-xs text-gray-500">
+                Linguistic QA
+              </span>
+
+            </div>
+
+            <a
+              href="https://github.com/ahmad-choirudin/portfolio/tree/main/ai-evaluation"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-cyan-400 transition hover:text-cyan-300"
+            >
+              View on GitHub
+              <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
+            </a>
+
+                    </article>
+
+                    <article class="glass rounded-2xl p-6 transition hover:-translate-y-1 hover:border-cyan-400/30">
+
+            <div class="mb-5 flex items-center justify-between">
+
+              <div class="rounded-xl bg-purple-400/10 p-3 text-purple-400">
+                <i data-lucide="blocks" class="h-6 w-6"></i>
+              </div>
+
+              <span class="rounded-full border border-white/10 px-3 py-1 text-xs text-gray-500">
+                Web3
+              </span>
+
+            </div>
+
+            <h3 class="text-xl font-bold text-white">
+              Web3 Research Framework
+            </h3>
+
+            <p class="mt-3 text-sm leading-7 text-gray-500">
+              A self-directed framework for researching blockchain,
+              crypto, DeFi protocols, ecosystems, token utility,
+              and project fundamentals.
+            </p>
+
+            <div class="mt-5 flex flex-wrap gap-2">
+
+              <span class="rounded-md bg-white/5 px-2 py-1 text-xs text-gray-500">
+                Web3
+              </span>
+
+              <span class="rounded-md bg-white/5 px-2 py-1 text-xs text-gray-500">
+                DeFi
+              </span>
+
+              <span class="rounded-md bg-white/5 px-2 py-1 text-xs text-gray-500">
+                Research
+              </span>
+
+            </div>
+
+            <a
+              href="https://github.com/ahmad-choirudin/portfolio/tree/main/web3-research"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-cyan-400"
+            >
+              View on GitHub
+              <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
+            </a>
+
+                    </article>
+
+                    <article class="glass rounded-2xl p-6 transition hover:-translate-y-1 hover:border-cyan-400/30">
+
+            <div class="mb-5 flex items-center justify-between">
+
+              <div class="rounded-xl bg-blue-400/10 p-3 text-blue-400">
+                <i data-lucide="monitor" class="h-6 w-6"></i>
+              </div>
+
+              <span class="rounded-full border border-white/10 px-3 py-1 text-xs text-gray-500">
+                Frontend
+              </span>
+
+            </div>
+
+            <h3 class="text-xl font-bold text-white">
+              Personal Portfolio Website
+            </h3>
+
+            <p class="mt-3 text-sm leading-7 text-gray-500">
+              A responsive personal portfolio website built
+              to present my AI evaluation, Web3 research,
+              frontend, and digital operations work.
+            </p>
+
+            <div class="mt-5 flex flex-wrap gap-2">
+
+              <span class="rounded-md bg-white/5 px-2 py-1 text-xs text-gray-500">
+                HTML
+              </span>
+
+              <span class="rounded-md bg-white/5 px-2 py-1 text-xs text-gray-500">
+                CSS
+              </span>
+
+              <span class="rounded-md bg-white/5 px-2 py-1 text-xs text-gray-500">
+                JavaScript
+              </span>
+
+            </div>
+
+            <a
+              href="https://github.com/ahmad-choirudin/portfolio/tree/main/frontend"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-cyan-400"
+            >
+              View on GitHub
+              <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
+            </a>
+
+                    </article>
+
+                  </div>
+
+      </section>
+
+            <!-- EXPERIENCE -->
+      <section id="experience" class="mx-auto max-w-6xl px-5 py-20">
+
+        <div class="mb-10">
+          <p class="font-mono text-sm text-cyan-400">04 / EXPERIENCE</p>
+
+          <h2 class="mt-2 text-3xl font-bold md:text-4xl">
+            Experience
+          </h2>
+        </div>
+
+        <div class="space-y-6">
+
+                    <div class="glass rounded-2xl p-6">
+
+            <div class="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+
+              <div>
+                <h3 class="text-xl font-bold text-white">
+                  Freelance Digital Worker
+                </h3>
+
+                <p class="mt-1 text-sm text-cyan-400">
+                  Remote / Freelance
+                </p>
+              </div>
+
+              <span class="font-mono text-xs text-gray-500">
+                2020 — Present
+              </span>
+
+            </div>
+
+            <ul class="mt-6 space-y-3 text-sm leading-7 text-gray-500">
+
+              <li class="flex gap-3">
+                <span class="text-cyan-400">→</span>
+                Conducted online research across Web3, crypto,
+                blockchain, and digital projects.
+              </li>
+
+              <li class="flex gap-3">
+                <span class="text-cyan-400">→</span>
+                Worked on AI data annotation and evaluation-related
+                remote project opportunities.
+              </li>
+
+              <li class="flex gap-3">
+                <span class="text-cyan-400">→</span>
+                Developed practical experience with online communities,
+                digital platforms, and remote workflows.
+              </li>
+
+            </ul>
+
+                    </div>
+
+                    <div class="glass rounded-2xl p-6">
+
+            <div class="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+
+              <div>
+                <h3 class="text-xl font-bold text-white">
+                  Sales & Merchandising Experience
+                </h3>
+
+                <p class="mt-1 text-sm text-cyan-400">
+                  Various Companies · Indonesia
+                </p>
+              </div>
+
+              <span class="font-mono text-xs text-gray-500">
+                2011 — 2020
+              </span>
+
+            </div>
+
+            <p class="mt-5 text-sm leading-7 text-gray-500">
+              Built professional experience in sales, merchandising,
+              customer interaction, product presentation, field
+              operations, and marketing before transitioning into
+              remote digital work.
+            </p>
+
+                    </div>
+        </div>
+
+      </section>
+
+            <!-- LEARNING -->
+      <section class="mx-auto max-w-6xl px-5 py-20">
+
+        <div class="mb-10">
+          <p class="font-mono text-sm text-cyan-400">05 / CURRENTLY LEARNING</p>
+
+          <h2 class="mt-2 text-3xl font-bold md:text-4xl">
+            Currently Learning
+          </h2>
+        </div>
+
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+
+          <div class="glass rounded-2xl p-5">
+            <i data-lucide="braces" class="mb-4 h-6 w-6 text-cyan-400"></i>
+            <h3 class="font-semibold text-white">JavaScript</h3>
+            <p class="mt-2 text-sm text-gray-500">
+              Improving practical frontend development skills.
+            </p>
+          </div>
+
+          <div class="glass rounded-2xl p-5">
+            <i data-lucide="atom" class="mb-4 h-6 w-6 text-cyan-400"></i>
+            <h3 class="font-semibold text-white">React</h3>
+            <p class="mt-2 text-sm text-gray-500">
+              Learning component-based web development.
+            </p>
+          </div>
+
+                    <div class="glass rounded-2xl p-5">
+            <i data-lucide="database" class="mb-4 h-6 w-6 text-cyan-400"></i>
+            <h3 class="font-semibold text-white">Python & SQL</h3>
+            <p class="mt-2 text-sm text-gray-500">
+              Building stronger data and automation fundamentals.
+            </p>
+          </div>
+
+          <div class="glass rounded-2xl p-5">
+            <i data-lucide="box" class="mb-4 h-6 w-6 text-cyan-400"></i>
+            <h3 class="font-semibold text-white">Blockchain Development</h3>
+            <p class="mt-2 text-sm text-gray-500">
+              Exploring smart contracts and Web3 development.
+            </p>
+          </div>
+
+        </div>
+
+      </section>
+
+            <!-- CONTACT -->
+      <section id="contact" class="mx-auto max-w-6xl px-5 py-20">
+
+        <div class="glass glow rounded-3xl p-8 md:p-12">
+
+          <div class="max-w-2xl">
+
+            <p class="font-mono text-sm text-cyan-400">
+              06 / CONTACT
+            </p>
+
+            <h2 class="mt-3 text-3xl font-bold md:text-5xl">
+              Let's work together.
+            </h2>
+
+            <p class="mt-5 leading-8 text-gray-500">
+              I'm open to remote opportunities involving AI evaluation,
+              data annotation, Web3 research, frontend development,
+              community operations, and digital research.
+            </p>
+
+          </div>
+
+                    <div class="mt-8 grid gap-4 sm:grid-cols-3">
+
+            <a
+              href="https://github.com/ahmad-choirudin"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="rounded-xl border border-white/10 bg-white/5 p-5 transition hover:border-cyan-400/30 hover:bg-white/10"
+            >
+              <i data-lucide="github" class="mb-3 h-6 w-6 text-cyan-400"></i>
+
+              <h3 class="font-semibold text-white">
+                GitHub
+              </h3>
+
+              <p class="mt-1 text-sm text-gray-500">
+                Projects & code
+              </p>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/ahmad-choirudin-344a78393"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="rounded-xl border border-white/10 bg-white/5 p-5 transition hover:border-cyan-400/30 hover:bg-white/10"
+            >
+              <i data-lucide="linkedin" class="mb-3 h-6 w-6 text-cyan-400"></i>
+
+              <h3 class="font-semibold text-white">
+                LinkedIn
+              </h3>
+
+              <p class="mt-1 text-sm text-gray-500">
+                Professional profile
+              </p>
+            </a>
+
+            <a
+              href="https://x.com/CubbieOG"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="rounded-xl border border-white/10 bg-white/5 p-5 transition hover:border-cyan-400/30 hover:bg-white/10"
+            >
+              <i data-lucide="twitter" class="mb-3 h-6 w-6 text-cyan-400"></i>
+
+              <h3 class="font-semibold text-white">
+                X
+              </h3>
+
+              <p class="mt-1 text-sm text-gray-500">
+                Web3 & digital interests
+              </p>
+            </a>
+
+          </div>
+
+        </div>
+
+      </section>
+
+            <!-- FOOTER -->
+      <footer class="border-t border-white/10">
+
+        <div class="mx-auto flex max-w-6xl flex-col gap-4 px-5 py-8 text-sm text-gray-600 md:flex-row md:items-center md:justify-between">
+
+          <p>
+            © 2026 Ahmad Choirudin. All rights reserved.
+          </p>
+
+          <p class="font-mono">
+            Built with HTML · Tailwind CSS · JavaScript
+          </p>
+
+        </div>
+
+      </footer>
+
+    </main>
+
+    <script>
+  lucide.createIcons();
+
+  const canvas = document.getElementById("particles");
+  const ctx = canvas.getContext("2d");
+
+  let particles = [];
+  let width = window.innerWidth;
+  let height = window.innerHeight;
+
+  function resizeCanvas() {
+    width = window.innerWidth;
+    height = window.innerHeight;
+
+    canvas.width = width;
+    canvas.height = height;
+  }
+
+  function createParticles() {
+    particles = [];
+
+    const count = Math.min(
+      Math.floor((width * height) / 18000),
+      90
+    );
+
+    for (let i = 0; i < count; i++) {
+      particles.push({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        size: Math.random() * 1.5 + 0.5,
+        speedX: (Math.random() - 0.5) * 0.25,
+        speedY: (Math.random() - 0.5) * 0.25
+      });
+    }
+  }
+
+  function drawParticles() {
+    ctx.clearRect(0, 0, width, height);
+
+    particles.forEach((particle) => {
+      particle.x += particle.speedX;
+      particle.y += particle.speedY;
+
+      if (particle.x < 0 || particle.x > width) {
+        particle.speedX *= -1;
+      }
+
+      if (particle.y < 0 || particle.y > height) {
+        particle.speedY *= -1;
+      }
+
+      ctx.beginPath();
+      ctx.arc(
+        particle.x,
+        particle.y,
+        particle.size,
+        0,
+        Math.PI * 2
+      );
+
+      ctx.fillStyle = "rgba(0, 242, 254, 0.45)";
+      ctx.fill();
+    });
+
+    requestAnimationFrame(drawParticles);
+  }
+
+  resizeCanvas();
+  createParticles();
+  drawParticles();
+
+  window.addEventListener("resize", () => {
+    resizeCanvas();
+    createParticles();
+  });
+    </script>
+
+    <script>
+  const filterButtons = document.querySelectorAll(".skill-filter");
+  const skillCards = document.querySelectorAll(".skill-card");
+
+  filterButtons.forEach((button) => {
+
+    button.addEventListener("click", () => {
+
+      const filter = button.dataset.filter;
+
+      filterButtons.forEach((btn) => {
+        btn.classList.remove(
+          "border-cyan-400/30",
+          "bg-cyan-400/10",
+          "text-cyan-300"
+        );
+
+        btn.classList.add(
+          "border-white/10",
+          "bg-white/5",
+          "text-gray-400"
+        );
+      });
+
+      button.classList.remove(
+        "border-white/10",
+        "bg-white/5",
+        "text-gray-400"
+      );
+
+      button.classList.add(
+        "border-cyan-400/30",
+        "bg-cyan-400/10",
+        "text-cyan-300"
+      );
+
+      skillCards.forEach((card) => {
+
+        const category = card.dataset.category;
+
+        if (filter === "all" || category === filter) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+
+      });
+
+    });
+
+  });
+    </script>
+
+    </div>
+
+</body>
+</html>
+          
