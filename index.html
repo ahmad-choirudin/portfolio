@@ -4,44 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Ahmad Choirudin | AI Evaluation · Web3 · Frontend</title>
+    <title>Ahmad Choirudin — Portfolio</title>
 
     <meta
         name="description"
-        content="Personal portfolio of Ahmad Choirudin — AI Evaluation, Data Annotation, Web3 Research, and Frontend Development."
+        content="Ahmad Choirudin — AI evaluation, Web3 research, data annotation, and frontend projects."
     >
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace']
-                    },
-                    colors: {
-                        cyan: {
-                            400: '#22d3ee',
-                            500: '#06b6d4',
-                            600: '#0891b2'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
-        rel="stylesheet"
-    >
 
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -50,204 +21,233 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-[#09090b] text-zinc-100 font-sans">
+<body class="bg-[#09090b] text-zinc-200 antialiased">
 
     <!-- =========================
          NAVBAR
     ========================== -->
-    <header class="sticky top-0 z-50 border-b border-zinc-800/80 bg-[#09090b]/95 backdrop-blur">
-        <nav class="max-w-6xl mx-auto px-5 lg:px-8 h-16 flex items-center justify-between">
 
-            <!-- Logo -->
-            <a
-                href="#home"
-                class="font-mono text-sm font-semibold tracking-tight text-zinc-100"
-            >
-                AHMAD<span class="text-cyan-400">.DEV</span>
-            </a>
+    <header class="fixed top-0 left-0 right-0 z-50">
+        <nav class="max-w-6xl mx-auto px-5 py-4">
+            <div class="nav-glass flex items-center justify-between">
 
-            <!-- Desktop Navigation -->
-            <div class="hidden md:flex items-center gap-7 text-sm text-zinc-400">
-
-                <a href="#about" class="nav-link hover:text-white transition">
-                    About
+                <a
+                    href="#home"
+                    class="font-mono text-sm font-bold tracking-wide text-white"
+                >
+                    ahmad<span class="text-cyan-400">.</span>
                 </a>
 
-                <a href="#skills" class="nav-link hover:text-white transition">
-                    Skills
-                </a>
+                <div class="hidden md:flex items-center gap-7 text-sm">
 
-                <a href="#projects" class="nav-link hover:text-white transition">
-                    Projects
-                </a>
+                    <a href="#home" class="nav-link">Home</a>
 
-                <a href="#experience" class="nav-link hover:text-white transition">
-                    Experience
-                </a>
+                    <a href="#about" class="nav-link">About</a>
 
-                <a href="#contact" class="nav-link hover:text-white transition">
-                    Contact
-                </a>
+                    <a href="#skills" class="nav-link">Skills</a>
 
-            </div>
+                    <a href="#projects" class="nav-link">Projects</a>
 
-            <!-- Actions -->
-            <div class="flex items-center gap-2">
+                    <a href="#experience" class="nav-link">Experience</a>
+
+                    <a href="#contact" class="nav-link">Contact</a>
+
+                </div>
 
                 <a
                     href="Ahmad_Choirudin_CV.pdf"
-                    target="_blank"
-                    class="hidden sm:flex items-center gap-2 px-3 py-2 border border-zinc-700 rounded-lg text-sm text-zinc-300 hover:text-white hover:border-zinc-500 transition"
+                    download
+                    class="hidden md:inline-flex items-center gap-2 rounded-lg border border-zinc-700 px-4 py-2 text-xs font-medium text-zinc-200 transition hover:border-cyan-400 hover:text-cyan-400"
                 >
-                    <i data-lucide="file-text" class="w-4 h-4"></i>
-                    CV
-                </a>
-
-                <a
-                    href="https://github.com/ahmad-choirudin"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="flex items-center gap-2 px-3 py-2 bg-white text-black rounded-lg text-sm font-medium hover:bg-zinc-200 transition"
-                >
-                    <i data-lucide="github" class="w-4 h-4"></i>
-                    GitHub
+                    <i data-lucide="download" class="w-4 h-4"></i>
+                    Download CV
                 </a>
 
             </div>
-
         </nav>
     </header>
 
 
     <!-- =========================
-         HERO
+         MAIN
     ========================== -->
+
     <main>
 
-        <section id="home" class="relative overflow-hidden">
+        <!-- =========================
+             HERO
+        ========================== -->
 
-            <div class="max-w-6xl mx-auto px-5 lg:px-8 py-20 md:py-28">
+        <section
+            id="home"
+            class="relative min-h-screen flex items-center pt-28 pb-20"
+        >
 
-                <div class="grid md:grid-cols-[220px_1fr] lg:grid-cols-[260px_1fr] gap-10 md:gap-14 items-center">
+            <div class="absolute inset-0 hero-grid pointer-events-none"></div>
 
-                    <!-- Profile Image -->
-                    <div class="flex justify-center md:justify-start">
+            <div class="max-w-6xl mx-auto px-5 w-full relative">
 
-                        <div class="relative">
+                <div class="grid lg:grid-cols-[1.2fr_0.8fr] gap-12 items-center">
 
-                            <div class="absolute -inset-2 rounded-3xl border border-cyan-400/10"></div>
+                    <!-- HERO TEXT -->
 
-                            <img
-                                src="image/ahmad-cartoon.png"
-                                alt="Ahmad Choirudin"
-                                class="relative w-52 h-64 md:w-56 md:h-72 object-cover rounded-3xl border border-zinc-700 bg-zinc-900"
+                    <div>
+
+                        <div class="inline-flex items-center gap-2 mb-6 rounded-full border border-zinc-800 bg-zinc-900/70 px-3 py-1.5">
+
+                            <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+
+                            <span class="font-mono text-xs text-zinc-400">
+                                AVAILABLE FOR REMOTE WORK
+                            </span>
+
+                        </div>
+
+
+                        <p class="font-mono text-sm text-cyan-400 mb-4">
+                            Hello, I'm
+                        </p>
+
+
+                        <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[0.95]">
+                            Ahmad
+                            <span class="block text-zinc-500">
+                                Choirudin<span class="text-cyan-400">.</span>
+                            </span>
+                        </h1>
+
+
+                        <h2 class="mt-7 text-xl sm:text-2xl text-zinc-300">
+                            AI Evaluation · Web3 Research · Frontend
+                        </h2>
+
+
+                        <p class="mt-6 max-w-2xl text-zinc-400 leading-7">
+                            I work on AI evaluation, data annotation, Web3 research,
+                            and small frontend projects. Most of what I know has come
+                            from working on real projects, researching things on my own,
+                            and learning by building.
+                        </p>
+
+
+                        <div class="flex flex-wrap gap-3 mt-8">
+
+                            <a
+                                href="#projects"
+                                class="inline-flex items-center gap-2 rounded-lg bg-cyan-400 px-5 py-3 text-sm font-semibold text-black transition hover:bg-cyan-300"
                             >
+                                View Projects
+                                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                            </a>
+
+
+                            <a
+                                href="Ahmad_Choirudin_CV.pdf"
+                                download
+                                class="inline-flex items-center gap-2 rounded-lg border border-zinc-700 px-5 py-3 text-sm font-medium text-zinc-200 transition hover:border-cyan-400 hover:text-cyan-400"
+                            >
+                                <i data-lucide="download" class="w-4 h-4"></i>
+                                Download CV
+                            </a>
+
+                        </div>
+
+
+                        <div class="flex items-center gap-5 mt-8">
+
+                            <a
+                                href="https://github.com/ahmad-choirudin"
+                                class="social-link"
+                                aria-label="GitHub"
+                            >
+                                <i data-lucide="github"></i>
+                            </a>
+
+
+                            <a
+                                href="https://www.linkedin.com/in/ahmad-choirudin-344a78393"
+                                class="social-link"
+                                aria-label="LinkedIn"
+                            >
+                                <i data-lucide="linkedin"></i>
+                            </a>
+
+
+                            <a
+                                href="https://x.com/CubbieOG"
+                                class="social-link"
+                                aria-label="X"
+                            >
+                                <i data-lucide="twitter"></i>
+                            </a>
 
                         </div>
 
                     </div>
 
 
-                    <!-- Hero Content -->
-                    <div>
+                    <!-- PROFILE CARD -->
 
-                        <div class="inline-flex items-center gap-2 px-3 py-1.5 mb-6 rounded-full border border-cyan-400/20 bg-cyan-400/5 text-cyan-400 text-xs font-mono">
+                    <div class="relative">
 
-                            <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+                        <div class="profile-card">
 
-                            Open to Remote Opportunities
+                            <div class="profile-card-top">
 
-                        </div>
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
 
+                                <span class="ml-2 font-mono text-xs text-zinc-500">
+                                    ahmad@portfolio
+                                </span>
 
-                        <p class="text-zinc-500 font-mono text-sm mb-3">
-                            Hello, I'm
-                        </p>
-
-
-                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
-
-                            Ahmad
-                            <span class="text-cyan-400">
-                                Choirudin
-                            </span>
-
-                        </h1>
+                            </div>
 
 
-                        <h2 class="mt-5 text-xl md:text-2xl text-zinc-300 font-medium">
+                            <div class="p-3">
 
-                            AI Evaluation · Web3 · Frontend
+                                <img
+                                    src="image/ahmad-cartoon.png"
+                                    alt="Ahmad Choirudin"
+                                    class="w-full aspect-[4/5] object-cover rounded-xl border border-zinc-800"
+                                >
 
-                        </h2>
-
-
-                        <p class="mt-6 max-w-2xl text-zinc-400 leading-7">
-
-                            I work on AI evaluation, data annotation, online research,
-                            and Web3 projects. I'm also building practical frontend
-                            projects while developing my skills in JavaScript,
-                            React, Python, SQL, and blockchain development.
-
-                        </p>
+                            </div>
 
 
-                        <!-- Buttons -->
-                        <div class="flex flex-wrap gap-3 mt-8">
+                            <div class="px-5 pb-5">
 
-                            <a
-                                href="#projects"
-                                class="inline-flex items-center gap-2 px-5 py-3 bg-cyan-500 text-black rounded-lg font-medium hover:bg-cyan-400 transition"
-                            >
-                                View Projects
-                                <i data-lucide="arrow-down-right" class="w-4 h-4"></i>
-                            </a>
+                                <div class="flex items-center justify-between">
 
+                                    <div>
 
-                            <a
-                                href="#contact"
-                                class="inline-flex items-center gap-2 px-5 py-3 border border-zinc-700 rounded-lg text-zinc-200 hover:border-zinc-500 hover:bg-zinc-900 transition"
-                            >
-                                Contact Me
-                            </a>
+                                        <p class="font-mono text-xs text-zinc-500">
+                                            current_focus
+                                        </p>
 
-                        </div>
+                                        <p class="mt-1 text-sm text-zinc-200">
+                                            Building & learning
+                                        </p>
+
+                                    </div>
 
 
-                        <!-- Social Links -->
-                        <div class="flex items-center gap-5 mt-8">
+                                    <div class="text-right">
 
-                            <a
-                                href="https://github.com/ahmad-choirudin"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="text-zinc-500 hover:text-white transition"
-                                aria-label="GitHub"
-                            >
-                                <i data-lucide="github" class="w-5 h-5"></i>
-                            </a>
+                                        <p class="font-mono text-xs text-zinc-500">
+                                            location
+                                        </p>
 
+                                        <p class="mt-1 text-sm text-zinc-200">
+                                            Indonesia
+                                        </p>
 
-                            <a
-                                href="https://www.linkedin.com/in/ahmad-choirudin-344a78393"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="text-zinc-500 hover:text-white transition"
-                                aria-label="LinkedIn"
-                            >
-                                <i data-lucide="linkedin" class="w-5 h-5"></i>
-                            </a>
+                                    </div>
 
+                                </div>
 
-                            <a
-                                href="https://x.com/CubbieOG"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="text-zinc-500 hover:text-white transition"
-                                aria-label="X"
-                            >
-                                <i data-lucide="twitter" class="w-5 h-5"></i>
-                            </a>
+                            </div>
 
                         </div>
 
@@ -263,86 +263,63 @@
         <!-- =========================
              ABOUT
         ========================== -->
-        <section id="about" class="border-t border-zinc-800">
 
-            <div class="max-w-6xl mx-auto px-5 lg:px-8 py-20">
+        <section id="about" class="section">
 
-                <div class="grid lg:grid-cols-[1fr_320px] gap-14">
+            <div class="max-w-6xl mx-auto px-5">
+
+                <div class="section-heading">
+
+                    <span class="section-number">
+                        01
+                    </span>
 
                     <div>
-
                         <p class="section-label">
-                            01 / ABOUT
+                            ABOUT
                         </p>
 
                         <h2 class="section-title">
-                            A practical, self-directed learner.
+                            A little about me.
                         </h2>
+                    </div>
+
+                </div>
 
 
-                        <div class="space-y-5 text-zinc-400 leading-7 max-w-3xl">
+                <div class="grid md:grid-cols-2 gap-10 mt-12">
 
-                            <p>
-                                My background started in sales and merchandising,
-                                where I learned communication, customer interaction,
-                                field research, and working independently.
-                            </p>
+                    <div>
 
-                            <p>
-                                Since 2020, I've been working independently on
-                                digital projects involving crypto, Web3 research,
-                                AI data annotation, online research, and remote work.
-                            </p>
+                        <p class="body-text">
+                            My background started outside the tech industry.
+                            I spent years working in sales and merchandising before
+                            moving into freelance digital work.
+                        </p>
 
-                            <p>
-                                Today, I'm focused on combining that experience with
-                                AI evaluation, linguistic quality work, Web3 research,
-                                and frontend development.
-                            </p>
 
-                        </div>
+                        <p class="body-text mt-5">
+                            Since 2020, I have worked on different online projects,
+                            including Web3 research, crypto research, AI data
+                            annotation, and remote digital work.
+                        </p>
 
                     </div>
 
 
-                    <!-- Focus -->
-                    <div class="border border-zinc-800 rounded-2xl p-6 bg-zinc-950">
+                    <div>
 
-                        <p class="font-mono text-xs text-zinc-500 mb-5">
-                            CURRENT FOCUS
+                        <p class="body-text">
+                            I am currently focused on improving my frontend skills
+                            while continuing to work with AI evaluation, research,
+                            and Web3-related projects.
                         </p>
 
-                        <ul class="space-y-4 text-sm">
 
-                            <li class="flex gap-3">
-                                <span class="text-cyan-400">01</span>
-                                <span class="text-zinc-300">
-                                    AI Evaluation & Data Annotation
-                                </span>
-                            </li>
-
-                            <li class="flex gap-3">
-                                <span class="text-cyan-400">02</span>
-                                <span class="text-zinc-300">
-                                    Indonesian Linguistic QA
-                                </span>
-                            </li>
-
-                            <li class="flex gap-3">
-                                <span class="text-cyan-400">03</span>
-                                <span class="text-zinc-300">
-                                    Web3 & Crypto Research
-                                </span>
-                            </li>
-
-                            <li class="flex gap-3">
-                                <span class="text-cyan-400">04</span>
-                                <span class="text-zinc-300">
-                                    Frontend Development
-                                </span>
-                            </li>
-
-                        </ul>
+                        <p class="body-text mt-5">
+                            I prefer learning by actually building things instead
+                            of only following tutorials.
+                        </p>
 
                     </div>
 
@@ -356,21 +333,33 @@
         <!-- =========================
              SKILLS
         ========================== -->
-        <section id="skills" class="border-t border-zinc-800">
 
-            <div class="max-w-6xl mx-auto px-5 lg:px-8 py-20">
+        <section id="skills" class="section section-border">
 
-                <p class="section-label">
-                    02 / SKILLS
-                </p>
+            <div class="max-w-6xl mx-auto px-5">
 
-                <h2 class="section-title">
-                    What I work with.
-                </h2>
+                <div class="section-heading">
+
+                    <span class="section-number">
+                        02
+                    </span>
+
+                    <div>
+                        <p class="section-label">
+                            SKILLS
+                        </p>
+
+                        <h2 class="section-title">
+                            Things I work with.
+                        </h2>
+                    </div>
+
+                </div>
 
 
-                <!-- Filter -->
-                <div class="flex flex-wrap gap-2 mt-8 mb-8">
+                <!-- FILTERS -->
+
+                <div class="flex flex-wrap gap-2 mt-10">
 
                     <button
                         class="filter-btn active"
@@ -383,14 +372,7 @@
                         class="filter-btn"
                         data-filter="ai"
                     >
-                        AI
-                    </button>
-
-                    <button
-                        class="filter-btn"
-                        data-filter="frontend"
-                    >
-                        Frontend
+                        AI & Data
                     </button>
 
                     <button
@@ -402,140 +384,210 @@
 
                     <button
                         class="filter-btn"
-                        data-filter="research"
+                        data-filter="frontend"
                     >
-                        Research
+                        Frontend
+                    </button>
+
+                    <button
+                        class="filter-btn"
+                        data-filter="tools"
+                    >
+                        Tools
                     </button>
 
                 </div>
 
 
-                <!-- Skill Grid -->
-                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- SKILL GRID -->
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
 
 
-                    <!-- AI -->
                     <div
                         class="skill-card"
                         data-category="ai"
                     >
+                        <i data-lucide="brain"></i>
 
-                        <div class="skill-icon">
-                            <i data-lucide="brain"></i>
-                        </div>
-
-                        <h3>AI Evaluation</h3>
+                        <h3>
+                            AI Evaluation
+                        </h3>
 
                         <p>
-                            Evaluating AI-generated responses,
-                            following task guidelines, and identifying
-                            quality or relevance issues.
+                            Evaluating AI responses and following project-specific
+                            quality guidelines.
                         </p>
-
                     </div>
 
 
-                    <!-- Linguistic -->
                     <div
                         class="skill-card"
                         data-category="ai"
                     >
+                        <i data-lucide="database"></i>
 
-                        <div class="skill-icon">
-                            <i data-lucide="languages"></i>
-                        </div>
-
-                        <h3>Linguistic QA</h3>
+                        <h3>
+                            Data Annotation
+                        </h3>
 
                         <p>
-                            Indonesian language quality, grammar,
-                            punctuation, naturalness, localization,
-                            and response consistency.
+                            Annotation, classification, transcription, and
+                            structured data tasks.
                         </p>
-
                     </div>
 
 
-                    <!-- Frontend -->
                     <div
                         class="skill-card"
-                        data-category="frontend"
+                        data-category="ai"
                     >
+                        <i data-lucide="languages"></i>
 
-                        <div class="skill-icon">
-                            <i data-lucide="code-2"></i>
-                        </div>
-
-                        <h3>Frontend</h3>
+                        <h3>
+                            Indonesian Linguistic QA
+                        </h3>
 
                         <p>
-                            HTML, CSS, JavaScript, Tailwind CSS,
-                            responsive layouts, and practical
-                            frontend projects.
+                            Indonesian language quality, grammar, tone,
+                            punctuation, and localization.
                         </p>
-
                     </div>
 
 
-                    <!-- Web3 -->
                     <div
                         class="skill-card"
                         data-category="web3"
                     >
+                        <i data-lucide="blocks"></i>
 
-                        <div class="skill-icon">
-                            <i data-lucide="blocks"></i>
-                        </div>
-
-                        <h3>Web3 Research</h3>
+                        <h3>
+                            Web3 Research
+                        </h3>
 
                         <p>
-                            Crypto ecosystems, airdrops, protocols,
-                            token research, DeFi concepts, and
-                            project analysis.
+                            Researching protocols, ecosystems, testnets,
+                            incentives, and project activity.
                         </p>
-
                     </div>
 
 
-                    <!-- Git -->
+                    <div
+                        class="skill-card"
+                        data-category="web3"
+                    >
+                        <i data-lucide="coins"></i>
+
+                        <h3>
+                            Crypto Research
+                        </h3>
+
+                        <p>
+                            Following crypto projects, token information,
+                            narratives, and ecosystem developments.
+                        </p>
+                    </div>
+
+
                     <div
                         class="skill-card"
                         data-category="frontend"
                     >
+                        <i data-lucide="code-2"></i>
 
-                        <div class="skill-icon">
-                            <i data-lucide="git-branch"></i>
-                        </div>
-
-                        <h3>Git & GitHub</h3>
+                        <h3>
+                            HTML / CSS
+                        </h3>
 
                         <p>
-                            Repository management, version control,
-                            project deployment, and maintaining
-                            public coding projects.
+                            Building responsive layouts and interfaces
+                            from scratch.
                         </p>
-
                     </div>
 
 
-                    <!-- Research -->
                     <div
                         class="skill-card"
-                        data-category="research"
+                        data-category="frontend"
                     >
+                        <i data-lucide="braces"></i>
 
-                        <div class="skill-icon">
-                            <i data-lucide="search"></i>
-                        </div>
-
-                        <h3>Online Research</h3>
+                        <h3>
+                            JavaScript
+                        </h3>
 
                         <p>
-                            Finding, comparing, organizing, and
-                            verifying information from online sources.
+                            Learning and using JavaScript for interactive
+                            frontend features.
                         </p>
+                    </div>
 
+
+                    <div
+                        class="skill-card"
+                        data-category="frontend"
+                    >
+                        <i data-lucide="palette"></i>
+
+                        <h3>
+                            Tailwind CSS
+                        </h3>
+
+                        <p>
+                            Building modern responsive interfaces with
+                            utility-first CSS.
+                        </p>
+                    </div>
+
+
+                    <div
+                        class="skill-card"
+                        data-category="tools"
+                    >
+                        <i data-lucide="git-branch"></i>
+
+                        <h3>
+                            Git & GitHub
+                        </h3>
+
+                        <p>
+                            Managing projects, repositories, commits,
+                            and version control.
+                        </p>
+                    </div>
+
+
+                    <div
+                        class="skill-card"
+                        data-category="tools"
+                    >
+                        <i data-lucide="search"></i>
+
+                        <h3>
+                            Online Research
+                        </h3>
+
+                        <p>
+                            Finding, comparing, and organizing information
+                            from online sources.
+                        </p>
+                    </div>
+
+
+                    <div
+                        class="skill-card"
+                        data-category="tools"
+                    >
+                        <i data-lucide="users"></i>
+
+                        <h3>
+                            Digital Operations
+                        </h3>
+
+                        <p>
+                            Online community handling, communication,
+                            and digital project support.
+                        </p>
                     </div>
 
                 </div>
@@ -548,35 +600,46 @@
         <!-- =========================
              PROJECTS
         ========================== -->
-        <section id="projects" class="border-t border-zinc-800">
 
-            <div class="max-w-6xl mx-auto px-5 lg:px-8 py-20">
+        <section id="projects" class="section">
 
-                <p class="section-label">
-                    03 / PROJECTS
-                </p>
+            <div class="max-w-6xl mx-auto px-5">
 
-                <h2 class="section-title">
-                    Things I'm building.
-                </h2>
+                <div class="section-heading">
+
+                    <span class="section-number">
+                        03
+                    </span>
+
+                    <div>
+                        <p class="section-label">
+                            PROJECTS
+                        </p>
+
+                        <h2 class="section-title">
+                            What I'm building.
+                        </h2>
+                    </div>
+
+                </div>
 
 
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
+                <div class="grid md:grid-cols-2 gap-5 mt-12">
 
 
-                    <!-- Airdrop Tracker -->
+                    <!-- PROJECT 1 -->
+
                     <article class="project-card">
 
-                        <div class="flex items-center justify-between mb-6">
+                        <div class="project-card-header">
 
-                            <div class="project-number">
-                                01
+                            <div class="project-icon">
+                                <i data-lucide="layout-dashboard"></i>
                             </div>
 
-                            <i
-                                data-lucide="external-link"
-                                class="w-5 h-5 text-zinc-600"
-                            ></i>
+                            <span class="project-status">
+                                BUILDING
+                            </span>
 
                         </div>
 
@@ -585,100 +648,128 @@
                             Airdrop Tracker
                         </h3>
 
+
                         <p>
-                            A practical Web3 dashboard for tracking
-                            airdrop opportunities, project status,
-                            priority, and important research notes.
+                            A simple dashboard for organizing Web3 projects,
+                            tracking airdrop opportunities, and keeping research
+                            in one place.
                         </p>
 
 
                         <div class="flex flex-wrap gap-2 mt-6">
 
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                            <span>Web3</span>
+                            <span class="tag">
+                                HTML
+                            </span>
+
+                            <span class="tag">
+                                CSS
+                            </span>
+
+                            <span class="tag">
+                                JavaScript
+                            </span>
+
+                            <span class="tag">
+                                Web3
+                            </span>
 
                         </div>
 
 
-                        <a
-                            href="https://github.com/ahmad-choirudin"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="project-link"
-                        >
-                            View on GitHub
-                            <i data-lucide="arrow-up-right"></i>
-                        </a>
+                        <div class="mt-7">
+
+                            <a
+                                href="https://github.com/ahmad-choirudin"
+                                class="project-link"
+                            >
+                                View on GitHub
+                                <i data-lucide="arrow-up-right"></i>
+                            </a>
+
+                        </div>
 
                     </article>
 
 
-                    <!-- Token Dashboard -->
+                    <!-- PROJECT 2 -->
+
                     <article class="project-card">
 
-                        <div class="flex items-center justify-between mb-6">
+                        <div class="project-card-header">
 
-                            <div class="project-number">
-                                02
+                            <div class="project-icon">
+                                <i data-lucide="chart-candlestick"></i>
                             </div>
 
-                            <i
-                                data-lucide="bar-chart-3"
-                                class="w-5 h-5 text-zinc-600"
-                            ></i>
+                            <span class="project-status">
+                                BUILDING
+                            </span>
 
                         </div>
 
 
                         <h3>
-                            Crypto Token Dashboard
+                            Token Dashboard
                         </h3>
 
+
                         <p>
-                            A frontend dashboard concept for organizing
-                            token information, project status, funding,
-                            categories, and research priorities.
+                            A frontend dashboard concept for displaying token
+                            information, protocol data, and useful crypto
+                            research in a cleaner interface.
                         </p>
 
 
                         <div class="flex flex-wrap gap-2 mt-6">
 
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                            <span>JSON</span>
+                            <span class="tag">
+                                HTML
+                            </span>
+
+                            <span class="tag">
+                                CSS
+                            </span>
+
+                            <span class="tag">
+                                JavaScript
+                            </span>
+
+                            <span class="tag">
+                                Crypto
+                            </span>
 
                         </div>
 
 
-                        <a
-                            href="https://github.com/ahmad-choirudin"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="project-link"
-                        >
-                            View on GitHub
-                            <i data-lucide="arrow-up-right"></i>
-                        </a>
+                        <div class="mt-7">
+
+                            <a
+                                href="https://github.com/ahmad-choirudin"
+                                class="project-link"
+                            >
+                                View on GitHub
+                                <i data-lucide="arrow-up-right"></i>
+                            </a>
+
+                        </div>
 
                     </article>
 
 
-                    <!-- AI Evaluation -->
+                    <!-- PROJECT 3 -->
+
                     <article class="project-card">
 
-                        <div class="flex items-center justify-between mb-6">
+                        <div class="project-card-header">
 
-                            <div class="project-number">
-                                03
+                            <div class="project-icon">
+                                <i data-lucide="bot"></i>
                             </div>
 
-                            <i
-                                data-lucide="bot"
-                                class="w-5 h-5 text-zinc-600"
-                            ></i>
+                            <span class="project-status">
+                                RESEARCH
+                            </span>
 
                         </div>
 
@@ -687,29 +778,111 @@
                             AI Response Evaluation
                         </h3>
 
+
                         <p>
-                            A structured evaluation workflow for reviewing
-                            AI-generated responses based on relevance,
-                            accuracy, naturalness, and task-specific criteria.
+                            A collection of experience and notes from working
+                            with AI evaluation, data annotation, transcription,
+                            and language quality tasks.
                         </p>
 
 
                         <div class="flex flex-wrap gap-2 mt-6">
 
-                            <span>AI Evaluation</span>
-                            <span>QA</span>
-                            <span>Indonesian</span>
+                            <span class="tag">
+                                AI
+                            </span>
+
+                            <span class="tag">
+                                Evaluation
+                            </span>
+
+                            <span class="tag">
+                                Annotation
+                            </span>
+
+                            <span class="tag">
+                                Indonesian
+                            </span>
 
                         </div>
 
 
-                        <a
-                            href="#contact"
-                            class="project-link"
-                        >
-                            Discuss Project
-                            <i data-lucide="arrow-up-right"></i>
-                        </a>
+                        <div class="mt-7">
+
+                            <a
+                                href="https://github.com/ahmad-choirudin"
+                                class="project-link"
+                            >
+                                View on GitHub
+                                <i data-lucide="arrow-up-right"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PROJECT 4 -->
+
+                    <article class="project-card">
+
+                        <div class="project-card-header">
+
+                            <div class="project-icon">
+                                <i data-lucide="terminal"></i>
+                            </div>
+
+                            <span class="project-status">
+                                LEARNING
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+                            Frontend Experiments
+                        </h3>
+
+
+                        <p>
+                            Small experiments and practice projects while
+                            learning JavaScript, responsive design, UI
+                            interactions, and modern frontend development.
+                        </p>
+
+
+                        <div class="flex flex-wrap gap-2 mt-6">
+
+                            <span class="tag">
+                                JavaScript
+                            </span>
+
+                            <span class="tag">
+                                Tailwind
+                            </span>
+
+                            <span class="tag">
+                                UI
+                            </span>
+
+                            <span class="tag">
+                                GitHub
+                            </span>
+
+                        </div>
+
+
+                        <div class="mt-7">
+
+                            <a
+                                href="https://github.com/ahmad-choirudin"
+                                class="project-link"
+                            >
+                                View on GitHub
+                                <i data-lucide="arrow-up-right"></i>
+                            </a>
+
+                        </div>
 
                     </article>
 
@@ -723,28 +896,44 @@
         <!-- =========================
              EXPERIENCE
         ========================== -->
-        <section id="experience" class="border-t border-zinc-800">
 
-            <div class="max-w-6xl mx-auto px-5 lg:px-8 py-20">
+        <section
+            id="experience"
+            class="section section-border"
+        >
 
-                <p class="section-label">
-                    04 / EXPERIENCE
-                </p>
+            <div class="max-w-6xl mx-auto px-5">
 
-                <h2 class="section-title">
-                    Where I've worked.
-                </h2>
+                <div class="section-heading">
+
+                    <span class="section-number">
+                        04
+                    </span>
+
+                    <div>
+                        <p class="section-label">
+                            EXPERIENCE
+                        </p>
+
+                        <h2 class="section-title">
+                            Where I've worked.
+                        </h2>
+                    </div>
+
+                </div>
 
 
-                <div class="mt-10 space-y-8">
+                <div class="mt-12">
 
 
-                    <!-- Freelance -->
+                    <!-- EXPERIENCE 1 -->
+
                     <div class="experience-item">
 
                         <div class="experience-year">
                             2020 — Present
                         </div>
+
 
                         <div>
 
@@ -752,15 +941,14 @@
                                 Freelance Digital Work
                             </h3>
 
-                            <p class="experience-role">
-                                AI Evaluation · Web3 · Research
+                            <p class="experience-company">
+                                Remote / Independent
                             </p>
 
-                            <p>
-                                Worked independently on crypto and Web3
-                                research, airdrop analysis, AI data
-                                annotation, evaluation tasks, and various
-                                remote digital projects.
+                            <p class="body-text mt-4">
+                                AI evaluation, data annotation, Web3 and crypto
+                                research, online research, and small frontend
+                                projects.
                             </p>
 
                         </div>
@@ -768,12 +956,14 @@
                     </div>
 
 
-                    <!-- Sales -->
+                    <!-- EXPERIENCE 2 -->
+
                     <div class="experience-item">
 
                         <div class="experience-year">
                             2011 — 2020
                         </div>
+
 
                         <div>
 
@@ -781,16 +971,14 @@
                                 Sales & Merchandising
                             </h3>
 
-                            <p class="experience-role">
-                                Field Sales · Merchandising · Customer Relations
+                            <p class="experience-company">
+                                Various Companies
                             </p>
 
-                            <p>
-                                Experience across sales assistant,
-                                merchandising, and field sales roles.
-                                Developed practical skills in communication,
-                                product presentation, customer interaction,
-                                and independent field work.
+                            <p class="body-text mt-4">
+                                Experience in sales, merchandising, customer
+                                interaction, field operations, and working
+                                with different products and retail environments.
                             </p>
 
                         </div>
@@ -807,38 +995,90 @@
         <!-- =========================
              CURRENTLY LEARNING
         ========================== -->
-        <section class="border-t border-zinc-800">
 
-            <div class="max-w-6xl mx-auto px-5 lg:px-8 py-20">
+        <section class="section">
 
-                <p class="section-label">
-                    CURRENTLY LEARNING
-                </p>
+            <div class="max-w-6xl mx-auto px-5">
 
-                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
+                <div class="section-heading">
 
-                    <div class="learning-card">
-                        <span>01</span>
-                        <h3>JavaScript</h3>
-                        <p>Building interactive frontend applications.</p>
+                    <span class="section-number">
+                        05
+                    </span>
+
+                    <div>
+                        <p class="section-label">
+                            LEARNING
+                        </p>
+
+                        <h2 class="section-title">
+                            Currently learning.
+                        </h2>
                     </div>
 
-                    <div class="learning-card">
-                        <span>02</span>
-                        <h3>React</h3>
-                        <p>Learning component-based frontend development.</p>
-                    </div>
+                </div>
+
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-12">
+
 
                     <div class="learning-card">
-                        <span>03</span>
-                        <h3>Python & SQL</h3>
-                        <p>Working toward stronger data and automation skills.</p>
+
+                        <i data-lucide="braces"></i>
+
+                        <h3>
+                            JavaScript
+                        </h3>
+
+                        <p>
+                            Building interactive frontend features.
+                        </p>
+
                     </div>
 
+
                     <div class="learning-card">
-                        <span>04</span>
-                        <h3>Blockchain</h3>
-                        <p>Exploring smart contracts, DeFi, and Web3 development.</p>
+
+                        <i data-lucide="atom"></i>
+
+                        <h3>
+                            React
+                        </h3>
+
+                        <p>
+                            Learning component-based frontend development.
+                        </p>
+
+                    </div>
+
+
+                    <div class="learning-card">
+
+                        <i data-lucide="database"></i>
+
+                        <h3>
+                            Python & SQL
+                        </h3>
+
+                        <p>
+                            Improving data and automation skills.
+                        </p>
+
+                    </div>
+
+
+                    <div class="learning-card">
+
+                        <i data-lucide="blocks"></i>
+
+                        <h3>
+                            Blockchain
+                        </h3>
+
+                        <p>
+                            Exploring smart contracts and Web3 development.
+                        </p>
+
                     </div>
 
                 </div>
@@ -851,62 +1091,81 @@
         <!-- =========================
              CONTACT
         ========================== -->
-        <section id="contact" class="border-t border-zinc-800">
 
-            <div class="max-w-6xl mx-auto px-5 lg:px-8 py-20">
+        <section
+            id="contact"
+            class="section section-border"
+        >
 
-                <div class="max-w-2xl">
+            <div class="max-w-4xl mx-auto px-5 text-center">
 
-                    <p class="section-label">
-                        05 / CONTACT
-                    </p>
-
-                    <h2 class="section-title">
-                        Let's connect.
-                    </h2>
-
-                    <p class="mt-5 text-zinc-400 leading-7">
-                        I'm open to remote opportunities involving AI
-                        evaluation, data annotation, Web3 research,
-                        frontend development, and digital operations.
-                    </p>
+                <p class="section-label">
+                    CONTACT
+                </p>
 
 
-                    <div class="flex flex-wrap gap-3 mt-8">
-
-                        <a
-                            href="https://github.com/ahmad-choirudin"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="contact-link"
-                        >
-                            <i data-lucide="github"></i>
-                            GitHub
-                        </a>
+                <h2 class="text-4xl sm:text-5xl font-bold text-white mt-4">
+                    Want to work together?
+                </h2>
 
 
-                        <a
-                            href="https://www.linkedin.com/in/ahmad-choirudin-344a78393"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="contact-link"
-                        >
-                            <i data-lucide="linkedin"></i>
-                            LinkedIn
-                        </a>
+                <p class="max-w-xl mx-auto mt-5 text-zinc-400 leading-7">
+                    I'm open to remote opportunities involving AI evaluation,
+                    data annotation, Web3 research, frontend work, and
+                    digital projects.
+                </p>
 
 
-                        <a
-                            href="https://x.com/CubbieOG"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="contact-link"
-                        >
-                            <i data-lucide="twitter"></i>
-                            X
-                        </a>
+                <div class="flex flex-wrap justify-center gap-3 mt-8">
 
-                    </div>
+                    <a
+                        href="mailto:your-email@example.com"
+                        class="inline-flex items-center gap-2 rounded-lg bg-cyan-400 px-5 py-3 text-sm font-semibold text-black transition hover:bg-cyan-300"
+                    >
+                        <i data-lucide="mail"></i>
+                        Email Me
+                    </a>
+
+
+                    <a
+                        href="Ahmad_Choirudin_CV.pdf"
+                        download
+                        class="inline-flex items-center gap-2 rounded-lg border border-zinc-700 px-5 py-3 text-sm font-medium text-zinc-200 transition hover:border-cyan-400 hover:text-cyan-400"
+                    >
+                        <i data-lucide="download"></i>
+                        Download CV
+                    </a>
+
+                </div>
+
+
+                <div class="flex justify-center gap-5 mt-8">
+
+                    <a
+                        href="https://github.com/ahmad-choirudin"
+                        class="social-link"
+                        aria-label="GitHub"
+                    >
+                        <i data-lucide="github"></i>
+                    </a>
+
+
+                    <a
+                        href="https://www.linkedin.com/in/ahmad-choirudin-344a78393"
+                        class="social-link"
+                        aria-label="LinkedIn"
+                    >
+                        <i data-lucide="linkedin"></i>
+                    </a>
+
+
+                    <a
+                        href="https://x.com/CubbieOG"
+                        class="social-link"
+                        aria-label="X"
+                    >
+                        <i data-lucide="twitter"></i>
+                    </a>
 
                 </div>
 
@@ -920,18 +1179,20 @@
     <!-- =========================
          FOOTER
     ========================== -->
-    <footer class="border-t border-zinc-800">
 
-        <div class="max-w-6xl mx-auto px-5 lg:px-8 py-8">
+    <footer class="border-t border-zinc-900 py-8">
 
-            <div class="flex flex-col sm:flex-row justify-between gap-3 text-sm text-zinc-600">
+        <div class="max-w-6xl mx-auto px-5">
 
-                <p>
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+
+                <p class="font-mono text-xs text-zinc-600">
                     © 2026 Ahmad Choirudin
                 </p>
 
-                <p class="font-mono">
-                    Built with HTML · Tailwind · JavaScript
+
+                <p class="font-mono text-xs text-zinc-600">
+                    Built while learning.
                 </p>
 
             </div>
@@ -941,7 +1202,7 @@
     </footer>
 
 
-    <!-- JavaScript -->
+    <!-- Custom JavaScript -->
     <script src="app.js"></script>
 
 </body>
