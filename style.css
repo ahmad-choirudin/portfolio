@@ -830,3 +830,25 @@ body {
     }
 
 }
+
+/* Profile Photo */
+.profile-photo {
+    display: block;
+    width: 220px;
+    height: 275px;
+    object-fit: cover;
+    border-radius: 0.75rem;
+    border: 1px solid #27272a;
+    margin: 0 auto;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .profile-photo {
+        width: 100%;
+        max-width: 280px;
+        height: auto;
+        aspect-ratio: 4 / 5;
+        margin: 0 auto;
+    }
+}
