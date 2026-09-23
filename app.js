@@ -12,7 +12,9 @@ document.addEventListener("DOMContentLoaded", () => {
 // =========================
 
 const filterButtons = document.querySelectorAll(".filter-btn");
+
 const skillCards = document.querySelectorAll(".skill-card");
+
 
 filterButtons.forEach((button) => {
 
@@ -23,21 +25,32 @@ filterButtons.forEach((button) => {
             btn.classList.remove("active");
         });
 
+
         // Add active state
         button.classList.add("active");
 
-        // Get selected category
+
+        // Get selected filter
         const filter = button.dataset.filter;
+
 
         // Filter cards
         skillCards.forEach((card) => {
 
             const category = card.dataset.category;
 
-            if (filter === "all" || category === filter) {
+
+            if (
+                filter === "all" ||
+                category === filter
+            ) {
+
                 card.classList.remove("hidden");
+
             } else {
+
                 card.classList.add("hidden");
+
             }
 
         });
@@ -52,41 +65,66 @@ filterButtons.forEach((button) => {
 // =========================
 
 const sections = document.querySelectorAll("section[id]");
+
 const navLinks = document.querySelectorAll(".nav-link");
+
 
 const updateActiveNav = () => {
 
     let currentSection = "";
 
+
     sections.forEach((section) => {
 
-        const sectionTop = section.offsetTop - 120;
-        const sectionHeight = section.offsetHeight;
+        const sectionTop =
+            section.offsetTop - 120;
+
+        const sectionHeight =
+            section.offsetHeight;
+
 
         if (
             window.scrollY >= sectionTop &&
-            window.scrollY < sectionTop + sectionHeight
+            window.scrollY <
+            sectionTop + sectionHeight
         ) {
-            currentSection = section.getAttribute("id");
+
+            currentSection =
+                section.getAttribute("id");
+
         }
 
     });
 
+
     navLinks.forEach((link) => {
 
-        const href = link.getAttribute("href");
+        const href =
+            link.getAttribute("href");
 
-        if (href === `#${currentSection}`) {
+
+        if (
+            href === `#${currentSection}`
+        ) {
+
             link.classList.add("text-white");
+
         } else {
+
             link.classList.remove("text-white");
+
         }
 
     });
 
 };
 
-window.addEventListener("scroll", updateActiveNav);
+
+window.addEventListener(
+    "scroll",
+    updateActiveNav
+);
+
 
 updateActiveNav();
 
@@ -95,12 +133,19 @@ updateActiveNav();
 // CURRENT YEAR
 // =========================
 
-const currentYear = new Date().getFullYear();
+const currentYear =
+    new Date().getFullYear();
 
-const footerYear = document.querySelector("footer p");
+
+const footerYear =
+    document.querySelector("footer p");
+
 
 if (footerYear) {
-    footerYear.textContent = `© ${currentYear} Ahmad Choirudin`;
+
+    footerYear.textContent =
+        `© ${currentYear} Ahmad Choirudin`;
+
 }
 
 
@@ -108,13 +153,23 @@ if (footerYear) {
 // EXTERNAL LINKS
 // =========================
 
-const externalLinks = document.querySelectorAll(
-    'a[href^="http"]'
-);
+const externalLinks =
+    document.querySelectorAll(
+        'a[href^="http"]'
+    );
+
 
 externalLinks.forEach((link) => {
 
-    link.setAttribute("target", "_blank");
-    link.setAttribute("rel", "noopener noreferrer");
+    link.setAttribute(
+        "target",
+        "_blank"
+    );
+
+
+    link.setAttribute(
+        "rel",
+        "noopener noreferrer"
+    );
 
 });
