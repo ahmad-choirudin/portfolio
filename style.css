@@ -1,3 +1,24 @@
+/* =========================
+   ROOT VARIABLES
+========================== */
+:root {
+    --color-bg: #09090b;
+    --color-bg-card: #0d0d0f;
+    --color-bg-subtle: #111113;
+    --color-border: #27272a;
+    --color-border-subtle: #18181b;
+    --color-border-strong: #3f3f46;
+
+    --color-text-muted: #71717a;
+    --color-text-secondary: #a1a1aa;
+
+    --color-accent: #22d3ee;
+    --color-accent-dark: #06b6d4;
+    --color-accent-soft: rgba(34, 211, 238, 0.08);
+
+    --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -23,19 +44,21 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    background: #09090b;
+    background: var(--color-bg);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #27272a;
+    background: var(--color-border);
     border-radius: 999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #3f3f46;
+    background: var(--color-border-strong);
 }
 
-/* Navbar */
+/* =========================
+   NAVBAR
+========================== */
 .nav-glass {
     padding: 0.65rem 0.9rem;
     border: 1px solid rgba(63, 63, 70, 0.65);
@@ -47,7 +70,7 @@ body {
 
 .nav-link {
     position: relative;
-    color: #a1a1aa;
+    color: var(--color-text-secondary);
     transition: color 0.2s ease;
 }
 
@@ -58,7 +81,7 @@ body {
     bottom: -7px;
     width: 0;
     height: 1px;
-    background: #22d3ee;
+    background: var(--color-accent);
     transition: width 0.2s ease;
 }
 
@@ -70,7 +93,42 @@ body {
     width: 100%;
 }
 
-/* Hero */
+/* Mobile menu panel */
+.mobile-menu {
+    border: 1px solid rgba(63, 63, 70, 0.65);
+    border-radius: 0.9rem;
+    background: rgba(9, 9, 11, 0.92);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    overflow: hidden;
+}
+
+.mobile-menu-inner {
+    display: flex;
+    flex-direction: column;
+    padding: 0.75rem 1rem 1rem;
+}
+
+.nav-link-mobile {
+    padding: 0.75rem 0.25rem;
+    color: var(--color-text-secondary);
+    font-size: 0.95rem;
+    border-bottom: 1px solid var(--color-border-subtle);
+    transition: color 0.2s ease;
+}
+
+.nav-link-mobile:last-of-type {
+    border-bottom: none;
+}
+
+.nav-link-mobile:hover,
+.nav-link-mobile.active {
+    color: #fff;
+}
+
+/* =========================
+   HERO
+========================== */
 .hero-grid {
     background-image:
         linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
@@ -83,9 +141,9 @@ body {
 .profile-card {
     position: relative;
     overflow: hidden;
-    border: 1px solid #27272a;
+    border: 1px solid var(--color-border);
     border-radius: 1rem;
-    background: #0d0d0f;
+    background: var(--color-bg-card);
     box-shadow: 0 25px 70px rgba(0, 0, 0, 0.35);
 }
 
@@ -97,7 +155,7 @@ body {
     width: 250px;
     height: 250px;
     border-radius: 50%;
-    background: rgba(34, 211, 238, 0.08);
+    background: var(--color-accent-soft);
     filter: blur(50px);
     pointer-events: none;
 }
@@ -106,7 +164,7 @@ body {
     display: flex;
     align-items: center;
     padding: 0.85rem 1rem;
-    border-bottom: 1px solid #27272a;
+    border-bottom: 1px solid var(--color-border);
 }
 
 .dot {
@@ -120,16 +178,26 @@ body {
 .dot.yellow { background: #eab308; }
 .dot.green { background: #22c55e; }
 
-#home img {
+/* Single source of truth for the profile photo size (was previously
+   split across an inline Tailwind class + two media queries) */
+.profile-photo {
+    display: block;
+    width: 190px;
+    height: 238px;
+    object-fit: cover;
+    border-radius: 0.75rem;
+    border: 1px solid var(--color-border);
     transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-#home img:hover {
+.profile-photo:hover {
     transform: translateY(-4px);
     border-color: rgba(34, 211, 238, 0.4);
 }
 
-/* Socials */
+/* =========================
+   SOCIALS
+========================== */
 .social-link {
     width: 48px;
     height: 48px;
@@ -137,9 +205,9 @@ body {
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    border: 1px solid #27272a;
+    border: 1px solid var(--color-border);
     border-radius: 12px;
-    color: #71717a;
+    color: var(--color-text-muted);
     background: transparent;
     transition: all 0.25s ease;
 }
@@ -151,8 +219,8 @@ body {
 }
 
 .social-link:hover {
-    color: #22d3ee;
-    border-color: #22d3ee;
+    color: var(--color-accent);
+    border-color: var(--color-accent);
     background: rgba(34, 211, 238, 0.05);
     transform: translateY(-2px);
 }
@@ -160,21 +228,23 @@ body {
 .x-icon {
     font-size: 18px;
     line-height: 1;
-    color: #71717a;
+    color: var(--color-text-muted);
 }
 
 .social-link:hover .x-icon {
-    color: #22d3ee;
+    color: var(--color-accent);
 }
 
-/* Common Layout */
+/* =========================
+   COMMON LAYOUT
+========================== */
 .section {
     position: relative;
     padding: 7rem 0;
 }
 
 .section-border {
-    border-top: 1px solid #18181b;
+    border-top: 1px solid var(--color-border-subtle);
 }
 
 .section-heading {
@@ -185,16 +255,16 @@ body {
 
 .section-number {
     padding-top: 0.35rem;
-    font-family: "JetBrains Mono", monospace;
+    font-family: var(--font-mono);
     font-size: 0.7rem;
-    color: #22d3ee;
+    color: var(--color-accent);
 }
 
 .section-label {
-    font-family: "JetBrains Mono", monospace;
+    font-family: var(--font-mono);
     font-size: 0.7rem;
     letter-spacing: 0.16em;
-    color: #71717a;
+    color: var(--color-text-muted);
 }
 
 .section-title {
@@ -206,41 +276,43 @@ body {
 }
 
 .body-text {
-    color: #a1a1aa;
+    color: var(--color-text-secondary);
     line-height: 1.8;
 }
 
-/* Skills Filter */
+/* =========================
+   SKILLS FILTER
+========================== */
 .filter-btn {
     padding: 0.55rem 0.9rem;
-    border: 1px solid #27272a;
+    border: 1px solid var(--color-border);
     border-radius: 0.6rem;
-    background: #111113;
-    color: #a1a1aa;
+    background: var(--color-bg-subtle);
+    color: var(--color-text-secondary);
     font-size: 0.8rem;
     cursor: pointer;
     transition: all 0.2s ease;
 }
 
 .filter-btn:hover {
-    border-color: #3f3f46;
+    border-color: var(--color-border-strong);
     color: #fff;
 }
 
 .filter-btn.active {
-    background-color: #06b6d4;
-    color: #09090b;
+    background-color: var(--color-accent-dark);
+    color: var(--color-bg);
     font-weight: 600;
-    border-color: #22d3ee;
+    border-color: var(--color-accent);
     box-shadow: 0 4px 14px rgba(34, 211, 238, 0.25);
 }
 
 .skill-card {
     min-height: 190px;
     padding: 1.4rem;
-    border: 1px solid #27272a;
+    border: 1px solid var(--color-border);
     border-radius: 0.9rem;
-    background: #0d0d0f;
+    background: var(--color-bg-card);
     transition: all 0.25s ease;
     animation: fadeIn 0.3s ease-in-out;
 }
@@ -254,7 +326,7 @@ body {
 .skill-card svg {
     width: 21px;
     height: 21px;
-    color: #22d3ee;
+    color: var(--color-accent);
     margin-bottom: 1.2rem;
 }
 
@@ -266,7 +338,7 @@ body {
 
 .skill-card p {
     margin-top: 0.6rem;
-    color: #71717a;
+    color: var(--color-text-muted);
     font-size: 0.85rem;
     line-height: 1.65;
 }
@@ -286,12 +358,14 @@ body {
     }
 }
 
-/* Projects */
+/* =========================
+   PROJECTS
+========================== */
 .project-card {
     padding: 1.5rem;
-    border: 1px solid #27272a;
+    border: 1px solid var(--color-border);
     border-radius: 1rem;
-    background: #0d0d0f;
+    background: var(--color-bg-card);
     transition: all 0.25s ease;
 }
 
@@ -314,10 +388,10 @@ body {
     justify-content: center;
     width: 42px;
     height: 42px;
-    border: 1px solid #27272a;
+    border: 1px solid var(--color-border);
     border-radius: 0.7rem;
-    background: #111113;
-    color: #22d3ee;
+    background: var(--color-bg-subtle);
+    color: var(--color-accent);
 }
 
 .project-icon svg {
@@ -326,8 +400,8 @@ body {
 }
 
 .project-status {
-    color: #22d3ee;
-    font-family: "JetBrains Mono", monospace;
+    color: var(--color-accent);
+    font-family: var(--font-mono);
     font-size: 0.65rem;
     letter-spacing: 0.05em;
 }
@@ -340,7 +414,7 @@ body {
 
 .project-card > p {
     margin-top: 0.65rem;
-    color: #71717a;
+    color: var(--color-text-muted);
     line-height: 1.7;
     font-size: 0.9rem;
 }
@@ -349,11 +423,11 @@ body {
     display: inline-flex;
     align-items: center;
     padding: 0.35rem 0.55rem;
-    border: 1px solid #27272a;
+    border: 1px solid var(--color-border);
     border-radius: 0.45rem;
-    color: #a1a1aa;
-    background: #111113;
-    font-family: "JetBrains Mono", monospace;
+    color: var(--color-text-secondary);
+    background: var(--color-bg-subtle);
+    font-family: var(--font-mono);
     font-size: 0.65rem;
 }
 
@@ -361,7 +435,7 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 0.45rem;
-    color: #a1a1aa;
+    color: var(--color-text-secondary);
     font-size: 0.8rem;
     transition: color 0.2s ease;
 }
@@ -373,20 +447,22 @@ body {
 }
 
 .project-link:hover {
-    color: #22d3ee;
+    color: var(--color-accent);
 }
 
 .project-link:hover svg {
     transform: translate(2px, -2px);
 }
 
-/* Experience */
+/* =========================
+   EXPERIENCE
+========================== */
 .experience-item {
     display: grid;
     grid-template-columns: 180px 1fr;
     gap: 2rem;
     padding: 2rem 0;
-    border-bottom: 1px solid #18181b;
+    border-bottom: 1px solid var(--color-border-subtle);
 }
 
 .experience-item:first-child {
@@ -395,8 +471,8 @@ body {
 
 .experience-year {
     padding-top: 0.25rem;
-    color: #71717a;
-    font-family: "JetBrains Mono", monospace;
+    color: var(--color-text-muted);
+    font-family: var(--font-mono);
     font-size: 0.7rem;
 }
 
@@ -408,16 +484,18 @@ body {
 
 .experience-company {
     margin-top: 0.35rem;
-    color: #22d3ee;
+    color: var(--color-accent);
     font-size: 0.8rem;
 }
 
-/* Learning */
+/* =========================
+   LEARNING
+========================== */
 .learning-card {
     padding: 1.35rem;
-    border: 1px solid #27272a;
+    border: 1px solid var(--color-border);
     border-radius: 0.9rem;
-    background: #0d0d0f;
+    background: var(--color-bg-card);
     transition: all 0.2s ease;
 }
 
@@ -429,7 +507,7 @@ body {
 .learning-card svg {
     width: 20px;
     height: 20px;
-    color: #22d3ee;
+    color: var(--color-accent);
     margin-bottom: 1rem;
 }
 
@@ -441,12 +519,14 @@ body {
 
 .learning-card p {
     margin-top: 0.45rem;
-    color: #71717a;
+    color: var(--color-text-muted);
     font-size: 0.8rem;
     line-height: 1.6;
 }
 
-/* Contact Blur Effect */
+/* =========================
+   CONTACT BLUR EFFECT
+========================== */
 #contact {
     overflow: hidden;
 }
@@ -460,12 +540,14 @@ body {
     width: 450px;
     height: 250px;
     border-radius: 50%;
-    background: rgba(34, 211, 238, 0.05);
+    background: var(--color-accent-soft);
     filter: blur(70px);
     pointer-events: none;
 }
 
-/* Responsive */
+/* =========================
+   RESPONSIVE
+========================== */
 @media (max-width: 768px) {
     .section {
         padding: 5rem 0;
@@ -484,12 +566,11 @@ body {
         padding-top: 0;
     }
 
-    #home img {
+    .profile-photo {
         width: 100%;
         max-width: 240px;
         height: auto;
         aspect-ratio: 4 / 5;
-        object-fit: cover;
     }
 }
 
@@ -514,13 +595,5 @@ body {
     .skill-card,
     .learning-card {
         padding: 1.2rem;
-    }
-}
-
-@media (min-width: 769px) {
-    #home img {
-        width: 190px;
-        height: 238px;
-        margin: 0 auto;
     }
 }
