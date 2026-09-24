@@ -632,3 +632,13 @@ body {
         padding: 1.2rem;
     }
 }
+
+/* Desktop only — mobile card sizing above is untouched.
+   On wide screens the card was much taller than its content, leaving
+   awkward empty space around the photo. Enlarge the photo so it fills
+   the card better. */
+@media (min-width: 1024px) {
+    .profile-photo {
+        width: 300px;
+    }
+}
