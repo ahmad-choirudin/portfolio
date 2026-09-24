@@ -235,6 +235,26 @@ body {
     color: var(--color-accent);
 }
 
+/* Equal-width outline buttons for Contact section (GitHub / LinkedIn / X) */
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 130px;
+    padding: 0.75rem 1.25rem;
+    border: 1px solid var(--color-border-strong);
+    border-radius: 0.5rem;
+    color: var(--color-text-secondary);
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.social-btn:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+}
+
 /* =========================
    COMMON LAYOUT
 ========================== */
@@ -595,5 +615,11 @@ body {
     .skill-card,
     .learning-card {
         padding: 1.2rem;
+    }
+
+    .social-btn {
+        width: 105px;
+        padding: 0.7rem 0.75rem;
+        font-size: 0.8rem;
     }
 }
