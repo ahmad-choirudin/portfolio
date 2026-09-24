@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,11 +11,16 @@
         content="Ahmad Choirudin — AI evaluation, Web3 research, data annotation, and frontend projects."
     >
 
+    <!-- Preconnect + Google Fonts (JetBrains Mono, used throughout style.css) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Lucide Icons (pinned version, not @latest) -->
+    <script src="https://unpkg.com/lucide@0.469.0"></script>
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
@@ -29,7 +34,7 @@
 
     <header class="fixed top-0 left-0 right-0 z-50">
         <nav class="max-w-6xl mx-auto px-5 py-4">
-            <div class="nav-glass flex items-center justify-between relative">
+            <div class="nav-glass flex items-center justify-between">
 
                 <a
                     href="#home"
@@ -38,58 +43,65 @@
                     ahmad<span class="text-cyan-400">.</span>
                 </a>
 
-                <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center gap-7 text-sm">
+
                     <a href="#home" class="nav-link">Home</a>
                     <a href="#about" class="nav-link">About</a>
                     <a href="#skills" class="nav-link">Skills</a>
                     <a href="#projects" class="nav-link">Projects</a>
                     <a href="#experience" class="nav-link">Experience</a>
                     <a href="#contact" class="nav-link">Contact</a>
+
                 </div>
 
-                <div class="hidden md:flex items-center">
-                    <a
-                        href="Ahmad_Choirudin_CV.pdf"
-                        download
-                        class="inline-flex items-center gap-2 rounded-lg border border-zinc-700 px-4 py-2 text-xs font-medium text-zinc-200 transition hover:border-cyan-400 hover:text-cyan-400"
-                    >
-                        <i data-lucide="download" class="w-4 h-4"></i>
-                        Download CV
-                    </a>
-                </div>
-
-                <!-- Mobile Menu Button -->
-                <button
-                    id="mobile-menu-btn"
-                    class="md:hidden p-2 text-zinc-400 hover:text-white focus:outline-none"
-                    aria-label="Toggle Navigation Menu"
-                >
-                    <i data-lucide="menu" class="w-6 h-6"></i>
-                </button>
-
-            </div>
-
-            <!-- Mobile Menu Dropdown -->
-            <div
-                id="mobile-menu"
-                class="hidden md:hidden mt-2 p-5 rounded-xl border border-zinc-800 bg-zinc-950/95 backdrop-blur-md flex flex-col gap-4 text-sm"
-            >
-                <a href="#home" class="mobile-nav-link text-zinc-300 hover:text-cyan-400">Home</a>
-                <a href="#about" class="mobile-nav-link text-zinc-300 hover:text-cyan-400">About</a>
-                <a href="#skills" class="mobile-nav-link text-zinc-300 hover:text-cyan-400">Skills</a>
-                <a href="#projects" class="mobile-nav-link text-zinc-300 hover:text-cyan-400">Projects</a>
-                <a href="#experience" class="mobile-nav-link text-zinc-300 hover:text-cyan-400">Experience</a>
-                <a href="#contact" class="mobile-nav-link text-zinc-300 hover:text-cyan-400">Contact</a>
-                
                 <a
                     href="Ahmad_Choirudin_CV.pdf"
                     download
-                    class="inline-flex items-center justify-center gap-2 rounded-lg border border-zinc-700 px-4 py-2 text-xs font-medium text-zinc-200 transition hover:border-cyan-400 hover:text-cyan-400 mt-2"
+                    class="hidden md:inline-flex items-center gap-2 rounded-lg border border-zinc-700 px-4 py-2 text-xs font-medium text-zinc-200 transition hover:border-cyan-400 hover:text-cyan-400"
                 >
                     <i data-lucide="download" class="w-4 h-4"></i>
                     Download CV
                 </a>
+
+                <!-- Mobile menu toggle (hidden on md and up) -->
+                <button
+                    id="menu-toggle"
+                    type="button"
+                    class="md:hidden inline-flex items-center justify-center w-9 h-9 rounded-lg border border-zinc-700 text-zinc-200 transition hover:border-cyan-400 hover:text-cyan-400"
+                    aria-label="Toggle navigation menu"
+                    aria-expanded="false"
+                    aria-controls="mobile-menu"
+                >
+                    <i data-lucide="menu" id="menu-icon-open" class="w-4 h-4"></i>
+                    <i data-lucide="x" id="menu-icon-close" class="w-4 h-4 hidden"></i>
+                </button>
+
+            </div>
+
+            <!-- Mobile menu panel -->
+            <div
+                id="mobile-menu"
+                class="mobile-menu hidden md:hidden mt-2"
+            >
+                <div class="mobile-menu-inner">
+
+                    <a href="#home" class="nav-link-mobile">Home</a>
+                    <a href="#about" class="nav-link-mobile">About</a>
+                    <a href="#skills" class="nav-link-mobile">Skills</a>
+                    <a href="#projects" class="nav-link-mobile">Projects</a>
+                    <a href="#experience" class="nav-link-mobile">Experience</a>
+                    <a href="#contact" class="nav-link-mobile">Contact</a>
+
+                    <a
+                        href="Ahmad_Choirudin_CV.pdf"
+                        download
+                        class="inline-flex items-center gap-2 rounded-lg border border-zinc-700 px-4 py-2.5 text-xs font-medium text-zinc-200 transition hover:border-cyan-400 hover:text-cyan-400 mt-2"
+                    >
+                        <i data-lucide="download" class="w-4 h-4"></i>
+                        Download CV
+                    </a>
+
+                </div>
             </div>
         </nav>
     </header>
@@ -101,18 +113,25 @@
 
     <main>
 
-        <!-- HERO SECTION -->
+        <!-- =========================
+             HERO
+        ========================== -->
+
         <section
             id="home"
             class="relative min-h-screen flex items-center pt-28 pb-20"
         >
+
             <div class="absolute inset-0 hero-grid pointer-events-none"></div>
 
             <div class="max-w-6xl mx-auto px-5 w-full relative">
+
                 <div class="grid lg:grid-cols-[1.2fr_0.8fr] gap-12 items-center">
 
                     <!-- HERO TEXT -->
+
                     <div>
+
                         <div class="inline-flex items-center gap-2 mb-6 rounded-full border border-zinc-800 bg-zinc-900/70 px-3 py-1.5">
                             <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
                             <span class="font-mono text-xs text-zinc-400">
@@ -143,6 +162,7 @@
                         </p>
 
                         <div class="flex flex-wrap gap-3 mt-8">
+
                             <a
                                 href="#projects"
                                 class="inline-flex items-center gap-2 rounded-lg bg-cyan-400 px-5 py-3 text-sm font-semibold text-black transition hover:bg-cyan-300"
@@ -159,53 +179,21 @@
                                 <i data-lucide="download" class="w-4 h-4"></i>
                                 Download CV
                             </a>
-                        </div>
 
-                        <div class="flex items-center gap-4 mt-8">
-                            <a
-                                href="https://github.com/ahmad-choirudin"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="social-link"
-                                aria-label="GitHub"
-                                title="GitHub"
-                            >
-                                <i data-lucide="github"></i>
-                            </a>
-
-                            <a
-                                href="https://www.linkedin.com/in/ahmad-choirudin-344a78393"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="social-link"
-                                aria-label="LinkedIn"
-                                title="LinkedIn"
-                            >
-                                <i data-lucide="linkedin"></i>
-                            </a>
-
-                            <a
-                                href="https://x.com/CubbieOG"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="social-link"
-                                aria-label="X"
-                                title="X"
-                            >
-                                <span class="x-icon">𝕏</span>
-                            </a>
                         </div>
                     </div>
 
 
                     <!-- PROFILE CARD -->
+
                     <div class="relative">
+
                         <div class="profile-card">
+
                             <div class="profile-card-top">
                                 <span class="dot red"></span>
                                 <span class="dot yellow"></span>
                                 <span class="dot green"></span>
-
                                 <span class="ml-2 font-mono text-xs text-zinc-500">
                                     ahmad@portfolio
                                 </span>
@@ -215,8 +203,7 @@
                                 <img
                                     src="image/ahmad-cartoon.png"
                                     alt="Ahmad Choirudin"
-                                    loading="lazy"
-                                    class="w-[200px] aspect-[4/5] object-cover rounded-xl border border-zinc-800 mx-auto"
+                                    class="profile-photo mx-auto"
                                 >
                             </div>
 
@@ -230,7 +217,6 @@
                                             Building & learning
                                         </p>
                                     </div>
-
                                     <div class="text-right">
                                         <p class="font-mono text-xs text-zinc-500">
                                             location
@@ -241,17 +227,26 @@
                                     </div>
                                 </div>
                             </div>
+
                         </div>
+
                     </div>
 
                 </div>
+
             </div>
+
         </section>
 
 
-        <!-- ABOUT SECTION -->
+        <!-- =========================
+             ABOUT
+        ========================== -->
+
         <section id="about" class="section">
+
             <div class="max-w-6xl mx-auto px-5">
+
                 <div class="section-heading">
                     <span class="section-number">01</span>
                     <div>
@@ -261,13 +256,13 @@
                 </div>
 
                 <div class="grid md:grid-cols-2 gap-10 mt-12">
+
                     <div>
                         <p class="body-text">
                             My background started outside the tech industry.
                             I spent years working in sales and merchandising before
                             moving into freelance digital work.
                         </p>
-
                         <p class="body-text mt-5">
                             Since 2020, I have worked on different online projects,
                             including Web3 research, crypto research, AI data
@@ -281,20 +276,27 @@
                             while continuing to work with AI evaluation, research,
                             and Web3-related projects.
                         </p>
-
                         <p class="body-text mt-5">
                             I prefer learning by actually building things instead
                             of only following tutorials.
                         </p>
                     </div>
+
                 </div>
+
             </div>
+
         </section>
 
 
-        <!-- SKILLS SECTION -->
+        <!-- =========================
+             SKILLS
+        ========================== -->
+
         <section id="skills" class="section section-border">
+
             <div class="max-w-6xl mx-auto px-5">
+
                 <div class="section-heading">
                     <span class="section-number">02</span>
                     <div>
@@ -305,15 +307,16 @@
 
                 <!-- FILTERS -->
                 <div class="flex flex-wrap gap-2 mt-10">
-                    <button class="filter-btn active" data-filter="all">All</button>
-                    <button class="filter-btn" data-filter="ai">AI & Data</button>
-                    <button class="filter-btn" data-filter="web3">Web3</button>
-                    <button class="filter-btn" data-filter="frontend">Frontend</button>
-                    <button class="filter-btn" data-filter="tools">Tools</button>
+                    <button type="button" class="filter-btn active" data-filter="all">All</button>
+                    <button type="button" class="filter-btn" data-filter="ai">AI & Data</button>
+                    <button type="button" class="filter-btn" data-filter="web3">Web3</button>
+                    <button type="button" class="filter-btn" data-filter="frontend">Frontend</button>
+                    <button type="button" class="filter-btn" data-filter="tools">Tools</button>
                 </div>
 
                 <!-- SKILL GRID -->
                 <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
+
                     <div class="skill-card" data-category="ai">
                         <i data-lucide="brain"></i>
                         <h3>AI Evaluation</h3>
@@ -379,14 +382,22 @@
                         <h3>Digital Operations</h3>
                         <p>Online community handling, communication, and digital project support.</p>
                     </div>
+
                 </div>
+
             </div>
+
         </section>
 
 
-        <!-- PROJECTS SECTION -->
+        <!-- =========================
+             PROJECTS
+        ========================== -->
+
         <section id="projects" class="section">
+
             <div class="max-w-6xl mx-auto px-5">
+
                 <div class="section-heading">
                     <span class="section-number">03</span>
                     <div>
@@ -400,147 +411,100 @@
                     <!-- PROJECT 1 -->
                     <article class="project-card">
                         <div class="project-card-header">
-                            <div class="project-icon">
-                                <i data-lucide="layout-dashboard"></i>
-                            </div>
+                            <div class="project-icon"><i data-lucide="layout-dashboard"></i></div>
                             <span class="project-status">BUILDING</span>
                         </div>
-
                         <h3>Airdrop Tracker</h3>
-
                         <p>
                             A simple dashboard for organizing Web3 projects,
                             tracking airdrop opportunities, and keeping research
                             in one place.
                         </p>
-
                         <div class="flex flex-wrap gap-2 mt-6">
                             <span class="tag">HTML</span>
                             <span class="tag">CSS</span>
                             <span class="tag">JavaScript</span>
                             <span class="tag">Web3</span>
                         </div>
-
                         <div class="mt-7">
-                            <a
-                                href="https://ahmad-choirudin.github.io/airdrop-tracker/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="project-link"
-                            >
+                            <a href="https://ahmad-choirudin.github.io/airdrop-tracker/" class="project-link">
                                 View Project
                                 <i data-lucide="arrow-up-right"></i>
                             </a>
                         </div>
                     </article>
 
-
                     <!-- PROJECT 2 -->
                     <article class="project-card">
                         <div class="project-card-header">
-                            <div class="project-icon">
-                                <i data-lucide="chart-candlestick"></i>
-                            </div>
+                            <div class="project-icon"><i data-lucide="chart-candlestick"></i></div>
                             <span class="project-status">BUILDING</span>
                         </div>
-
                         <h3>Web3 Research OS</h3>
-
                         <p>
                             A personal workspace I built to keep Web3 research organized,
                             from protocols and funding to ecosystem notes and narratives.
                         </p>
-
                         <div class="flex flex-wrap gap-2 mt-6">
                             <span class="tag">HTML</span>
                             <span class="tag">CSS</span>
                             <span class="tag">JavaScript</span>
                             <span class="tag">Crypto</span>
                         </div>
-
                         <div class="mt-7">
-                            <a
-                                href="https://ahmad-choirudin.github.io/Web3-Research-OS"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="project-link"
-                            >
+                            <a href="https://ahmad-choirudin.github.io/Web3-Research-OS" class="project-link">
                                 Demo Project
                                 <i data-lucide="arrow-up-right"></i>
                             </a>
                         </div>
                     </article>
 
-
                     <!-- PROJECT 3 -->
                     <article class="project-card">
                         <div class="project-card-header">
-                            <div class="project-icon">
-                                <i data-lucide="bot"></i>
-                            </div>
+                            <div class="project-icon"><i data-lucide="bot"></i></div>
                             <span class="project-status">RESEARCH</span>
                         </div>
-
                         <h3>AI Response Evaluation</h3>
-
                         <p>
                             A collection of experience and notes from working
                             with AI evaluation, data annotation, transcription,
                             and language quality tasks.
                         </p>
-
                         <div class="flex flex-wrap gap-2 mt-6">
                             <span class="tag">AI</span>
                             <span class="tag">Evaluation</span>
                             <span class="tag">Annotation</span>
                             <span class="tag">Indonesian</span>
                         </div>
-
                         <div class="mt-7">
-                            <a
-                                href="https://github.com/ahmad-choirudin"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="project-link"
-                            >
+                            <a href="https://github.com/ahmad-choirudin" class="project-link">
                                 View on GitHub
                                 <i data-lucide="arrow-up-right"></i>
                             </a>
                         </div>
                     </article>
 
-
                     <!-- PROJECT 4 -->
                     <article class="project-card">
                         <div class="project-card-header">
-                            <div class="project-icon">
-                                <i data-lucide="terminal"></i>
-                            </div>
+                            <div class="project-icon"><i data-lucide="terminal"></i></div>
                             <span class="project-status">LEARNING</span>
                         </div>
-
                         <h3>Frontend Experiments</h3>
-
                         <p>
                             Small experiments and practice projects while
                             learning JavaScript, responsive design, UI
                             interactions, and modern frontend development.
                         </p>
-
                         <div class="flex flex-wrap gap-2 mt-6">
                             <span class="tag">JavaScript</span>
                             <span class="tag">Tailwind</span>
                             <span class="tag">UI</span>
                             <span class="tag">GitHub</span>
                         </div>
-
                         <div class="mt-7">
-                            <a
-                                href="https://github.com/ahmad-choirudin"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="project-link"
-                            >
+                            <a href="https://github.com/ahmad-choirudin" class="project-link">
                                 View on GitHub
                                 <i data-lucide="arrow-up-right"></i>
                             </a>
@@ -548,13 +512,20 @@
                     </article>
 
                 </div>
+
             </div>
+
         </section>
 
 
-        <!-- EXPERIENCE SECTION -->
+        <!-- =========================
+             EXPERIENCE
+        ========================== -->
+
         <section id="experience" class="section section-border">
+
             <div class="max-w-6xl mx-auto px-5">
+
                 <div class="section-heading">
                     <span class="section-number">04</span>
                     <div>
@@ -564,6 +535,7 @@
                 </div>
 
                 <div class="mt-12">
+
                     <div class="experience-item">
                         <div class="experience-year">2020 — Present</div>
                         <div>
@@ -589,14 +561,22 @@
                             </p>
                         </div>
                     </div>
+
                 </div>
+
             </div>
+
         </section>
 
 
-        <!-- CURRENTLY LEARNING SECTION -->
+        <!-- =========================
+             CURRENTLY LEARNING
+        ========================== -->
+
         <section class="section">
+
             <div class="max-w-6xl mx-auto px-5">
+
                 <div class="section-heading">
                     <span class="section-number">05</span>
                     <div>
@@ -606,6 +586,7 @@
                 </div>
 
                 <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-12">
+
                     <div class="learning-card">
                         <i data-lucide="braces"></i>
                         <h3>JavaScript</h3>
@@ -629,14 +610,22 @@
                         <h3>Blockchain</h3>
                         <p>Exploring smart contracts and Web3 development.</p>
                     </div>
+
                 </div>
+
             </div>
+
         </section>
 
 
-        <!-- CONTACT SECTION -->
+        <!-- =========================
+             CONTACT
+        ========================== -->
+
         <section id="contact" class="section section-border">
+
             <div class="max-w-4xl mx-auto px-5 text-center">
+
                 <p class="section-label">CONTACT</p>
 
                 <h2 class="text-4xl sm:text-5xl font-bold text-white mt-4">
@@ -650,6 +639,7 @@
                 </p>
 
                 <div class="flex flex-wrap justify-center gap-3 mt-8">
+
                     <a
                         href="mailto:ahmadc716@gmail.com"
                         class="inline-flex items-center gap-2 rounded-lg bg-cyan-400 px-5 py-3 text-sm font-semibold text-black transition hover:bg-cyan-300"
@@ -658,73 +648,51 @@
                         Email Me
                     </a>
 
-                    <a
-                        href="Ahmad_Choirudin_CV.pdf"
-                        download
-                        class="inline-flex items-center gap-2 rounded-lg border border-zinc-700 px-5 py-3 text-sm font-medium text-zinc-200 transition hover:border-cyan-400 hover:text-cyan-400"
-                    >
-                        <i data-lucide="download"></i>
-                        Download CV
-                    </a>
                 </div>
 
-                <div class="flex flex-wrap justify-center gap-3 mt-8">
+                <div class="flex flex-wrap justify-center gap-3 mt-4">
+
                     <a
                         href="https://github.com/ahmad-choirudin"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="social-link"
-                        aria-label="GitHub"
-                        title="GitHub"
+                        class="inline-flex items-center gap-2 rounded-lg border border-zinc-700 px-5 py-3 text-sm font-medium text-zinc-200 transition hover:border-cyan-400 hover:text-cyan-400"
                     >
-                        <i data-lucide="github"></i>
-                        <span>GitHub</span>
+                        GitHub
                     </a>
 
                     <a
                         href="https://www.linkedin.com/in/ahmad-choirudin-344a78393"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="social-link"
-                        aria-label="LinkedIn"
-                        title="LinkedIn"
+                        class="inline-flex items-center gap-2 rounded-lg border border-zinc-700 px-5 py-3 text-sm font-medium text-zinc-200 transition hover:border-cyan-400 hover:text-cyan-400"
                     >
-                        <i data-lucide="linkedin"></i>
-                        <span>LinkedIn</span>
+                        LinkedIn
                     </a>
 
                     <a
                         href="https://x.com/CubbieOG"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="social-link"
-                        aria-label="X"
-                        title="X"
+                        class="inline-flex items-center gap-2 rounded-lg border border-zinc-700 px-5 py-3 text-sm font-medium text-zinc-200 transition hover:border-cyan-400 hover:text-cyan-400"
                     >
-                        <span class="x-icon">𝕏</span>
-                        <span>X</span>
+                        X
                     </a>
+
                 </div>
             </div>
+
         </section>
 
     </main>
 
 
-    <!-- FOOTER -->
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
     <footer class="border-t border-zinc-900 py-8">
         <div class="max-w-6xl mx-auto px-5">
             <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
-                <p class="font-mono text-xs text-zinc-600">
-                    © 2026 Ahmad Choirudin
-                </p>
-                <p class="font-mono text-xs text-zinc-600">
-                    Built while learning.
-                </p>
+                <p id="footer-year" class="font-mono text-xs text-zinc-600">© 2026 Ahmad Choirudin</p>
+                <p class="font-mono text-xs text-zinc-600">Built while learning.</p>
             </div>
         </div>
     </footer>
-
 
     <!-- Custom JavaScript -->
     <script src="app.js"></script>
