@@ -238,42 +238,42 @@ body {
 ========================= */
 
 .social-link {
-    min-width: 100px;
-    height: 44px;
+    width: 48px;
+    height: 48px;
 
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-
-    padding: 0 14px;
 
     border: 1px solid #27272a;
-    border-radius: 10px;
+    border-radius: 12px;
 
-    color: #a1a1aa;
-    background: #0d0d0f;
+    color: #71717a;
+    background: transparent;
 
-    font-size: 13px;
-    font-weight: 500;
-
-    transition:
-        color 0.25s ease,
-        border-color 0.25s ease,
-        background 0.25s ease,
-        transform 0.25s ease;
+    transition: all 0.25s ease;
 }
 
 .social-link svg {
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
+    stroke-width: 1.7;
 }
 
 .social-link:hover {
     color: #22d3ee;
-    border-color: rgba(34, 211, 238, 0.4);
+    border-color: #22d3ee;
     background: rgba(34, 211, 238, 0.05);
     transform: translateY(-2px);
+}
+
+.x-icon {
+    font-size: 21px;
+    color: #71717a;
+}
+
+.social-link:hover .x-icon {
+    color: #22d3ee;
 }
 
 .x-icon {
