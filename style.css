@@ -12,9 +12,9 @@
     --color-text-muted: #71717a;
     --color-text-secondary: #a1a1aa;
 
-    --color-accent: #22d3ee;
-    --color-accent-dark: #06b6d4;
-    --color-accent-soft: rgba(34, 211, 238, 0.08);
+    --color-accent: #14f195;
+    --color-accent-dark: #00d18f;
+    --color-accent-soft: rgba(20, 241, 149, 0.08);
 
     --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
 }
@@ -35,7 +35,7 @@ body {
 }
 
 ::selection {
-    background: rgba(34, 211, 238, 0.25);
+    background: rgba(20, 241, 149, 0.25);
     color: #fff;
 }
 
@@ -192,7 +192,7 @@ body {
 
 .profile-photo:hover {
     transform: translateY(-4px);
-    border-color: rgba(34, 211, 238, 0.4);
+    border-color: rgba(20, 241, 149, 0.4);
 }
 
 /* =========================
@@ -221,7 +221,7 @@ body {
 .social-link:hover {
     color: var(--color-accent);
     border-color: var(--color-accent);
-    background: rgba(34, 211, 238, 0.05);
+    background: rgba(20, 241, 149, 0.05);
     transform: translateY(-2px);
 }
 
@@ -338,7 +338,7 @@ body {
     color: var(--color-bg);
     font-weight: 600;
     border-color: var(--color-accent);
-    box-shadow: 0 4px 14px rgba(34, 211, 238, 0.25);
+    box-shadow: 0 4px 14px rgba(20, 241, 149, 0.25);
 }
 
 .skill-card {
@@ -353,7 +353,7 @@ body {
 
 .skill-card:hover {
     transform: translateY(-3px);
-    border-color: rgba(34, 211, 238, 0.35);
+    border-color: rgba(20, 241, 149, 0.35);
     background: #101013;
 }
 
@@ -405,7 +405,7 @@ body {
 
 .project-card:hover {
     transform: translateY(-4px);
-    border-color: rgba(34, 211, 238, 0.3);
+    border-color: rgba(20, 241, 149, 0.3);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
 }
 
@@ -535,7 +535,7 @@ body {
 
 .learning-card:hover {
     transform: translateY(-3px);
-    border-color: rgba(34, 211, 238, 0.3);
+    border-color: rgba(20, 241, 149, 0.3);
 }
 
 .learning-card svg {
