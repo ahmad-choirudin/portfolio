@@ -178,10 +178,6 @@ body {
 .dot.yellow { background: #eab308; }
 .dot.green { background: #22c55e; }
 
-/* Single source of truth for the profile photo size (was previously
-   split across an inline Tailwind class + two media queries).
-   Image has a transparent background, so no object-fit cropping needed —
-   it sits directly on the dark card. */
 .profile-photo {
     display: block;
     width: 220px;
@@ -237,9 +233,6 @@ body {
     color: var(--color-accent);
 }
 
-/* Equal-width outline buttons for Contact section (GitHub / LinkedIn / X).
-   flex: 1 1 0 with a max-width lets them shrink together to always fit
-   one row on narrow screens, while capping out at 130px on desktop. */
 .social-btn-row {
     display: flex;
     flex-wrap: nowrap;
@@ -633,10 +626,6 @@ body {
     }
 }
 
-/* Desktop only — mobile card sizing above is untouched.
-   On wide screens the card was much taller than its content, leaving
-   awkward empty space around the photo. Enlarge the photo so it fills
-   the card better. */
 @media (min-width: 1024px) {
     .profile-photo {
         width: 300px;
